@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amao-villa.vercel.app/sitemap.xml
