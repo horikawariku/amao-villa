@@ -21,11 +21,12 @@
 <link rel="preload" as="image" href="/assets/hero.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Zen+Old+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Zen+Old+Mincho:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://redirect-tracker-eta.vercel.app/api/site-tracker-js" defer></script>
 <style>
 :root{--ink:#1b232e;--ink2:#5a6472;--bg:#f5f2ec;--card:#ffffff;--line:#e2ddd2;--navy:#161d26;--sand:#b39264;--cream:#f5f2ec;
---en:'Outfit',sans-serif;--mincho:'Zen Old Mincho',serif;--jp:'Noto Sans JP',sans-serif}
+--en:'Manrope',sans-serif;--mincho:'Zen Old Mincho',serif;--jp:'Zen Kaku Gothic New',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{font-family:var(--jp);color:var(--ink);background:var(--bg);line-height:1.85;letter-spacing:.01em;-webkit-font-smoothing:antialiased}
@@ -43,7 +44,7 @@ nav.gnav a{opacity:.85}nav.gnav a:hover{opacity:1}
 @media(max-width:760px){nav.gnav a:not(.nav-book){display:none}}
 /* hero */
 .hero{position:relative;height:92svh;min-height:540px;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hslides{position:absolute;inset:0}.hs{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease}.hs.on{opacity:1}
 .hero .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,16,22,.42),rgba(12,16,22,.06) 45%,rgba(12,16,22,.68))}
 .hero-copy{position:relative;z-index:2;padding:0 22px 84px;max-width:760px;margin:0 auto;width:100%;text-align:center}
 .hero-en{font-family:var(--en);font-weight:300;font-size:12px;letter-spacing:.5em;margin-right:-.5em;opacity:.9}
@@ -72,7 +73,7 @@ nav.gnav a{opacity:.85}nav.gnav a:hover{opacity:1}
 .new{position:absolute;right:14px;top:14px;background:var(--sand);color:#fff;font-family:var(--en);font-size:10px;letter-spacing:.2em;padding:6px 13px;border-radius:999px}
 .cbody{padding:26px 24px 28px}
 .cen{font-family:var(--en);font-size:10.5px;letter-spacing:.26em;color:var(--sand);font-weight:600}
-.card h3{font-family:var(--mincho);font-weight:500;font-size:23px;line-height:1.5;margin:8px 0 4px}
+.card h3{font-family:var(--jp);font-weight:700;font-size:21px;line-height:1.5;margin:8px 0 4px}
 .carea{font-size:12.5px;color:var(--ink2)}
 .ctag{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 6px}
 .ctag span{font-size:11px;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:#faf8f4}
@@ -88,13 +89,34 @@ nav.gnav a{opacity:.85}nav.gnav a:hover{opacity:1}
 .cmpwrap::-webkit-scrollbar{height:0}
 table.cmp{border-collapse:separate;border-spacing:0;min-width:860px;width:100%;background:var(--card);border-radius:14px;overflow:hidden}
 .cmp th,.cmp td{padding:13px 14px;border-bottom:1px solid var(--line);font-size:13px;text-align:center;vertical-align:middle}
-.cmp thead th{background:var(--navy);color:#fff;font-family:var(--mincho);font-weight:500;font-size:13.5px;line-height:1.5;padding:16px 10px}
+.cmp thead th{background:var(--navy);color:#fff;font-family:var(--jp);font-weight:600;font-size:13.5px;line-height:1.5;padding:16px 10px}
 .cmp .attr{position:sticky;left:0;background:#efe9df;font-weight:600;font-size:12px;white-space:nowrap;text-align:left;z-index:2;min-width:88px}
 .cmp thead .attr{background:var(--navy)}
 .cmp .ok{color:#2c7a4b;font-weight:700}
 .cmp .no{color:#c9c2b6}
 .cmp .bkc a{display:inline-block;background:var(--navy);color:#fff;font-size:12px;font-weight:600;padding:9px 16px;border-radius:999px;white-space:nowrap}
 .cmp-note{font-size:11.5px;color:var(--ink2);margin-top:12px;text-align:center}
+/* map */
+#leafmap{height:420px;border-radius:18px;box-shadow:0 10px 30px rgba(23,29,38,.1);z-index:1}
+.maplegend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.maplegend button{font-family:var(--jp);font-size:12px;font-weight:500;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;color:var(--ink2)}
+.maplegend button:hover{border-color:var(--sand);color:var(--ink)}
+/* day */
+.day-list{max-width:640px;margin:0 auto;position:relative;padding-left:26px}
+.day-list:before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.day-item{position:relative;padding:0 0 34px}
+.day-item:last-child{padding-bottom:0}
+.day-item:before{content:"";position:absolute;left:-24px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--sand)}
+.day-time{font-family:var(--en);font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--sand)}
+.day-item h3{font-size:15.5px;font-weight:700;margin:4px 0 5px}
+.day-item p{font-size:13px;color:var(--ink2);line-height:2}
+/* how */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:0 auto}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border-radius:16px;padding:26px 22px;box-shadow:0 8px 26px rgba(23,29,38,.07);text-align:center}
+.step .n{font-family:var(--en);font-weight:800;font-size:13px;letter-spacing:.2em;color:var(--sand)}
+.step h3{font-size:15.5px;font-weight:700;margin:10px 0 8px}
+.step p{font-size:12.5px;color:var(--ink2);line-height:2}
 /* about */
 .about{background:var(--navy);color:#f2eee6}
 .about .shead .jp{color:#b7bcc6}
@@ -106,7 +128,7 @@ footer .brand2{font-family:var(--en);letter-spacing:.3em;margin-right:-.3em;colo
 .bar{position:fixed;left:50%;transform:translate(-50%,calc(100% + 24px));bottom:12px;z-index:40;width:calc(100vw - 24px);max-width:420px;background:#fff;border-radius:16px;box-shadow:0 12px 34px rgba(12,16,22,.25);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;transition:transform .35s ease}
 .bar.on{transform:translate(-50%,0)}
 .bar .t{font-size:12px;line-height:1.6}
-.bar .t b{font-family:var(--mincho);font-size:14px;font-weight:600;display:block}
+.bar .t b{font-family:var(--jp);font-size:13.5px;font-weight:700;display:block}
 .bar a{flex:none;background:var(--navy);color:#fff;border-radius:11px;padding:11px 22px;font-size:13.5px;font-weight:600;text-align:center;line-height:1.2}
 .bar a small{display:block;font-family:var(--en);font-size:8.5px;letter-spacing:.16em;opacity:.7;margin-bottom:1px}
 </style>
@@ -126,7 +148,12 @@ footer .brand2{font-family:var(--en);letter-spacing:.3em;margin-right:-.3em;colo
 </header>
 
 <section class="hero">
- <img src="/assets/hero.jpg" alt="相模湾と初島を望むAMAO VILLA 熱海からの夕景" fetchpriority="high">
+ <div class="hslides">
+  <img class="hs on" src="/assets/hero.jpg" alt="相模湾と初島を望むAMAO VILLA 熱海からの夕景" fetchpriority="high">
+  <img class="hs" src="/assets/hero2.jpg" alt="夕暮れに灯るVilla 緑と物語の外観" loading="lazy">
+  <img class="hs" src="/assets/hero3.jpg" alt="海を見下ろすスイングベッド" loading="lazy">
+  <img class="hs" src="/assets/hero4.jpg" alt="吹き抜けの中庭と縁側" loading="lazy">
+ </div>
  <div class="ov"></div>
  <div class="hero-copy">
   <p class="hero-en">IZU / ATAMI PRIVATE VILLAS</p>
@@ -143,6 +170,27 @@ footer .brand2{font-family:var(--en);letter-spacing:.3em;margin-right:-.3em;colo
  </div>
 </section>
 
+
+<section class="sect" id="map" style="padding-top:12px">
+ <div class="wrap">
+  <div class="shead"><div class="en">MAP</div><div class="jp">伊豆・熱海に点在する6つの邸宅</div></div>
+  <div id="leafmap"></div>
+  <div class="maplegend" id="maplegend"></div>
+ </div>
+</section>
+
+<section class="sect" id="day" style="padding-top:24px">
+ <div class="wrap">
+  <div class="shead"><div class="en">A DAY AT AMAO</div><div class="jp">貸切ヴィラの一日</div></div>
+  <div class="day-list">
+   <div class="day-item"><div class="day-time">15:00</div><h3>チェックイン</h3><p>スマートロックでそのまま入室。今日から一棟まるごと、あなたたちだけの家。</p></div>
+   <div class="day-item"><div class="day-time">16:00</div><h3>サウナと外気浴</h3><p>貸切サウナで汗を流し、風の音だけの外気浴。誰にも会わない「整い」。</p></div>
+   <div class="day-item"><div class="day-time">18:00</div><h3>BBQと夕景</h3><p>ガーデンで火を起こし、海や森が暮れていくのを眺めながら乾杯。</p></div>
+   <div class="day-item"><div class="day-time">21:00</div><h3>夜は長く、自由に</h3><p>温泉に浸かる。焚き火を囲む。大画面で映画を観る。門限も、隣室への気遣いもなし。</p></div>
+   <div class="day-item"><div class="day-time">8:00</div><h3>静かな朝</h3><p>鳥の声で目覚めて、朝風呂と珈琲。チェックアウトの10時まで、ゆっくりと。</p></div>
+  </div>
+ </div>
+</section>
 <section class="sect" id="compare" style="padding-top:20px">
  <div class="wrap">
   <div class="shead"><div class="en">COMPARE</div><div class="jp">宿の選び方 ─ 設備でくらべる</div></div>
@@ -151,6 +199,17 @@ footer .brand2{font-family:var(--en);letter-spacing:.3em;margin-right:-.3em;colo
  </div>
 </section>
 
+
+<section class="sect" id="how" style="padding-top:24px">
+ <div class="wrap">
+  <div class="shead"><div class="en">HOW TO BOOK</div><div class="jp">ご予約はかんたん3ステップ</div></div>
+  <div class="steps">
+   <div class="step"><div class="n">STEP 1</div><h3>宿を選ぶ</h3><p>6つのヴィラから、エリアと設備で。迷ったら比較表をどうぞ。</p></div>
+   <div class="step"><div class="n">STEP 2</div><h3>空室カレンダーを見る</h3><p>「空室・料金を見る」から予約ページへ。日付ごとの空きと料金がすぐ分かります。</p></div>
+   <div class="step"><div class="n">STEP 3</div><h3>そのまま予約</h3><p>日付と人数を選んで決済すれば完了。予約確認メールが届きます。</p></div>
+  </div>
+ </div>
+</section>
 <section class="sect about" id="about">
  <div class="wrap">
   <div class="shead"><div class="en" style="color:#fff">ABOUT</div><div class="jp">AMAO VILLAについて</div></div>
@@ -213,7 +272,7 @@ document.getElementById('cards').innerHTML=V.map(function(p){
  +'<div class="ctag">'+p.tags.map(function(t){return '<span>'+t+'</span>'}).join('')+'</div>'
  +'<p class="clead">'+p.lead+'</p>'
  +'<div class="cspec"><span><b>'+p.cap+'</b>名まで</span><span>'+p.bed+'</span><span>一日一組・貸切</span></div>'
- +'<div class="cbtn"><a class="book" data-book data-p="'+p.id+'" data-cta="card" href="'+bookUrl(p.id,'card')+'" target="_blank" rel="noopener"><small>BOOK</small>空室・料金を見る</a></div>'
+ +'<div class="cbtn"><a class="book" data-book data-p="'+p.id+'" data-cta="card" href="'+bookUrl(p.id,'card')+'" target="_blank" rel="noopener">空室・料金を見る</a></div>'
  +'</div></article>'
 }).join('');
 // ===== 比較表 =====
@@ -247,6 +306,38 @@ document.addEventListener('click',function(ev){
 var hd=document.getElementById('hd'),bar=document.getElementById('bar');
 function onScroll(){var y=window.scrollY;hd.classList.toggle('solid',y>40);bar.classList.toggle('on',y>window.innerHeight*.6)}
 addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// ===== hero 2秒スライド =====
+(function(){
+ var hs=document.querySelectorAll('.hs');var i=0;
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ setInterval(function(){if(document.hidden)return;hs[i].classList.remove('on');i=(i+1)%hs.length;hs[i].classList.add('on')},2000);
+})();
+// ===== Leaflet Map =====
+(function(){
+ var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+ s.onload=function(){
+  var pts=[
+   {n:'Villa 緑と物語',id:'amao-midori',ll:[34.885,139.098]},
+   {n:'AMAO 伊豆高原',id:'amao-izukogen',ll:[34.874,139.089]},
+   {n:'AMAO 熱海',id:'amao-atami',ll:[35.083,139.066]},
+   {n:'AMAO 城ヶ崎',id:'amao-jogasaki',ll:[34.888,139.128]},
+   {n:'AMAO 富戸',id:'amao-futo',ll:[34.928,139.128]},
+   {n:'AMAO 自然郷',id:'amao-shizenkyo',ll:[34.858,139.088]}
+  ];
+  var map=L.map('leafmap',{scrollWheelZoom:false}).setView([34.96,139.1],10);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:18}).addTo(map);
+  var lg=document.getElementById('maplegend');
+  pts.forEach(function(p){
+   var mk=L.circleMarker(p.ll,{radius:9,color:'#161d26',weight:2,fillColor:'#b39264',fillOpacity:.95}).addTo(map);
+   mk.bindPopup('<b style="font-size:13px">'+p.n+'</b><br><a href="#'+p.id+'" style="color:#b39264;font-weight:700">この宿を見る</a>');
+   var b=document.createElement('button');b.textContent=p.n;
+   b.onclick=function(){map.setView(p.ll,12);mk.openPopup()};
+   lg.appendChild(b);
+  });
+ };
+ document.body.appendChild(s);
+})();
 </script>
 </body>
 </html>
