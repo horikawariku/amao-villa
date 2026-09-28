@@ -64,19 +64,28 @@ nav.gnav a{opacity:.85}nav.gnav a:hover{opacity:1}
 /* villas */
 .cards{display:grid;gap:56px}
 .card{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 10px 34px rgba(23,29,38,.08)}
-.cgal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:3px;background:#0e1319}
+.cgal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:3px;background:#fff}
 .cgal::-webkit-scrollbar{display:none}
 .cgal>div{flex:0 0 86%;scroll-snap-align:start;aspect-ratio:16/10;position:relative}
 @media(min-width:761px){.cgal>div{flex-basis:58%}}
 .cgal img{width:100%;height:100%;object-fit:cover}
 .pin{position:absolute;left:14px;top:14px;background:rgba(22,29,38,.82);color:#fff;font-family:var(--en);font-size:10px;letter-spacing:.22em;padding:6px 13px;border-radius:999px}
-.new{position:absolute;right:14px;top:14px;background:var(--sand);color:#fff;font-family:var(--en);font-size:10px;letter-spacing:.2em;padding:6px 13px;border-radius:999px}
+.new{position:absolute;right:14px;top:14px;background:#161d26;color:#fff;font-family:var(--en);font-size:10px;letter-spacing:.2em;padding:6px 13px;border-radius:999px}
 .cbody{padding:26px 24px 28px}
 .cen{font-family:var(--en);font-size:10.5px;letter-spacing:.26em;color:var(--sand);font-weight:600}
 .card h3{font-family:var(--jp);font-weight:700;font-size:21px;line-height:1.5;margin:8px 0 4px}
 .carea{font-size:12.5px;color:var(--ink2)}
 .ctag{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 6px}
-.ctag span{font-size:11px;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:#faf8f4}
+.ctag span{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:#faf8f4;color:var(--ink2)}
+.t-sauna{background:#fdf0e7!important;border-color:#f0d5bd!important;color:#a85a24!important}
+.t-onsen{background:#fdecec!important;border-color:#f2d0d0!important;color:#bb4a46!important}
+.t-jacuzzi{background:#e8f4f8!important;border-color:#cbe4ee!important;color:#2e7f9c!important}
+.t-sea{background:#e9f2fb!important;border-color:#cadff2!important;color:#2b66a8!important}
+.t-view{background:#e8f5ef!important;border-color:#cbe7da!important;color:#25795c!important}
+.t-pet{background:#eef6e8!important;border-color:#d6e9c9!important;color:#4d8434!important}
+.t-bbq{background:#fff1e0!important;border-color:#f3dcba!important;color:#b06718!important}
+.t-fire{background:#fdeee6!important;border-color:#f2d3c2!important;color:#bb4f2a!important}
+.t-screen{background:#efeef8!important;border-color:#d9d6ef!important;color:#5a53a5!important}
 .clead{font-size:13.5px;line-height:2;margin:12px 0 4px}
 .cspec{display:flex;gap:22px;margin:14px 0 20px;font-size:12.5px;color:var(--ink2)}
 .cspec b{font-family:var(--en);font-size:19px;font-weight:500;color:var(--ink);margin-right:3px}
@@ -100,24 +109,24 @@ table.cmp{border-collapse:separate;border-spacing:0;min-width:860px;width:100%;b
 #leafmap{height:420px;border-radius:18px;box-shadow:0 10px 30px rgba(23,29,38,.1);z-index:1}
 .maplegend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
 .maplegend button{font-family:var(--jp);font-size:12px;font-weight:500;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;color:var(--ink2)}
-.maplegend button:hover{border-color:var(--sand);color:var(--ink)}
+.maplegend button:hover{border-color:var(--ink);color:var(--ink)}
 /* day */
 .daystrip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 22px 10px;scrollbar-width:none}
 .daystrip::-webkit-scrollbar{display:none}
 .daycard{flex:0 0 78%;max-width:400px;scroll-snap-align:center}
 .daycard .di{aspect-ratio:1/1;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(23,29,38,.5)}
 .daycard .di img{width:100%;height:100%;object-fit:cover}
-.daycard .dt{display:flex;align-items:center;gap:12px;font-family:var(--en);font-size:13.5px;font-weight:700;letter-spacing:.08em;color:var(--sand);margin-top:15px}
+.daycard .dt{display:flex;align-items:center;gap:12px;font-family:var(--en);font-size:13.5px;font-weight:700;letter-spacing:.08em;color:var(--ink);margin-top:15px}
 .daycard .dt:after{content:"";flex:1;height:1px;background:var(--line)}
 .daycard h3{font-size:15.5px;font-weight:700;margin:6px 0 4px}
 .daycard p{font-size:12.5px;color:var(--ink2);line-height:2}
-.daynext{font-family:var(--en);font-size:10px;letter-spacing:.14em;color:var(--sand);margin-left:10px}
+.daynext{font-family:var(--en);font-size:10px;letter-spacing:.14em;color:var(--ink2);margin-left:10px}
 @media(min-width:900px){.daystrip{padding:0 calc(50vw - 440px) 10px}}
 /* how */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:900px;margin:0 auto}
 @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.steps{grid-template-columns:1fr}}
 .step{background:var(--card);border-radius:16px;padding:26px 22px;box-shadow:0 8px 26px rgba(23,29,38,.07);text-align:center}
-.step .n{font-family:var(--en);font-weight:800;font-size:13px;letter-spacing:.2em;color:var(--sand)}
+.step .n{font-family:var(--en);font-weight:800;font-size:13px;letter-spacing:.2em;color:var(--ink2)}
 .step h3{font-size:15.5px;font-weight:700;margin:10px 0 8px}
 .step p{font-size:12.5px;color:var(--ink2);line-height:2}
 /* about(living) */
@@ -260,15 +269,26 @@ var SRC_KEY='_amao_src',SRC_T='_amao_src_t',TTL=30*864e5;
 function norm(s){s=(s||'').toLowerCase();if(!s)return null;if(s.indexOf('insta')>-1||s==='ig')return 'instagram';if(s.indexOf('tiktok')>-1||s==='tt')return 'tiktok';return s.replace(/[^a-z0-9_-]/g,'').slice(0,32)||null}
 try{var q=new URLSearchParams(location.search);var u=norm(q.get('utm_source'));if(u){localStorage.setItem(SRC_KEY,u);localStorage.setItem(SRC_T,String(Date.now()))}}catch(e){}
 function src(){try{var s=localStorage.getItem(SRC_KEY),t=parseInt(localStorage.getItem(SRC_T)||'0',10);if(s&&Date.now()-t<TTL)return s}catch(e){}return 'direct'}
+function tagCls(t){
+ if(t.indexOf('サウナ')>-1)return 't-sauna';
+ if(t.indexOf('温泉')>-1)return 't-onsen';
+ if(t.indexOf('ジャグジー')>-1)return 't-jacuzzi';
+ if(t.indexOf('オーシャン')>-1||t==='海の眺望')return 't-sea';
+ if(t.indexOf('絶景')>-1)return 't-view';
+ if(t.indexOf('ペット')>-1||t.indexOf('ドッグ')>-1)return 't-pet';
+ if(t.indexOf('BBQ')>-1)return 't-bbq';
+ if(t.indexOf('暖炉')>-1||t.indexOf('焚き火')>-1)return 't-fire';
+ if(t.indexOf('スクリーン')>-1)return 't-screen';
+ return ''}
 function bookUrl(id,cta){return TRACKER+'?p='+id+'&s='+encodeURIComponent(src())+'&cta='+cta}
 // ===== カード描画 =====
 document.getElementById('cards').innerHTML=V.map(function(p){
  return '<article class="card" id="'+p.id+'">'
  +'<div class="cgal">'+p.imgs.map(function(im,i){return '<div>'+(i===0?'<span class="pin">'+p.en.replace(' — NEW OPEN','')+'</span>'+(p.isNew?'<span class="new">NEW OPEN</span>':''):'')+'<img src="/assets/'+im+'.jpg" alt="'+p.alts[i]+'" loading="'+(p.isNew&&i===0?'eager':'lazy')+'"></div>'}).join('')+'</div>'
- +'<div class="cbody"><div class="cen">'+p.en+'</div><h3>'+p.name+'</h3><div class="carea">'+p.area+'</div>'
- +'<div class="ctag">'+p.tags.map(function(t){return '<span>'+t+'</span>'}).join('')+'</div>'
+ +'<div class="cbody"><h3>'+p.name+'</h3><div class="carea">'+p.area+'</div>'
+ +'<div class="ctag">'+p.tags.map(function(t){return '<span class="'+tagCls(t)+'">'+t+'</span>'}).join('')+'</div>'
  +'<p class="clead">'+p.lead+'</p>'
- +'<div class="cspec"><span><b>'+p.cap+'</b>名まで</span><span>'+p.bed+'</span><span>一日一組・貸切</span></div>'
+
  +'<div class="cbtn"><a class="book" data-book data-p="'+p.id+'" data-cta="card" href="'+bookUrl(p.id,'card')+'" target="_blank" rel="noopener">空室・料金を見る</a></div>'
  +'</div></article>'
 }).join('');
@@ -346,7 +366,7 @@ document.getElementById('steps').innerHTML=STEPS.map(function(s){
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:18}).addTo(map);
   var lg=document.getElementById('maplegend');
   pts.forEach(function(p){
-   var mk=L.circleMarker(p.ll,{radius:9,color:'#161d26',weight:2,fillColor:'#b39264',fillOpacity:.95}).addTo(map);
+   var mk=L.circleMarker(p.ll,{radius:9,color:'#161d26',weight:2,fillColor:'#161d26',fillOpacity:.95}).addTo(map);
    mk.bindPopup('<b style="font-size:13px">'+p.n+'</b><br><a href="#'+p.id+'" style="color:#b39264;font-weight:700">この宿を見る</a>');
    var b=document.createElement('button');b.textContent=p.n;
    b.onclick=function(){map.setView(p.ll,12);mk.openPopup()};
