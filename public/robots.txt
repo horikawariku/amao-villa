@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amao-villa-psi.vercel.app/sitemap.xml
+Sitemap: https://amao-villa.vercel.app/sitemap.xml
