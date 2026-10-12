@@ -362,7 +362,7 @@ document.getElementById('steps').innerHTML=STEPS.map(function(s){
    {n:'AMAO 自然郷',id:'amao-shizenkyo',ll:[34.858,139.088]}
   ];
   var map=L.map('leafmap',{scrollWheelZoom:false}).setView([34.96,139.1],10);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:18}).addTo(map);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap contributors',maxZoom:18}).addTo(map);
   var lg=document.getElementById('maplegend');
   pts.forEach(function(p){
    var mk=L.circleMarker(p.ll,{radius:9,color:'#161d26',weight:2,fillColor:'#161d26',fillOpacity:.95}).addTo(map);
