@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AMAO VILLA 自然郷｜自然郷の一棟貸しヴィラ（一日一組・最大12名）| AMAO VILLA</title>
+<meta name="description" content="熱海・自然郷の一棟貸し「AMAO VILLA 自然郷」。天然ヒノキサウナ（ロウリュ可・最大7名）×水風呂×温泉。海を見下ろすブランコベンチ。一日一組・最大12名。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://amao-villa-psi.vercel.app/shizenkyo/">
+<meta name="theme-color" content="#161d26">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AMAO VILLA">
+<meta property="og:title" content="AMAO VILLA 自然郷｜自然郷の一棟貸しヴィラ">
+<meta property="og:description" content="熱海・自然郷の一棟貸し「AMAO VILLA 自然郷」。天然ヒノキサウナ（ロウリュ可・最大7名）×水風呂×温泉。海を見下ろすブランコベンチ。一日一組・最大12名。">
+<meta property="og:url" content="https://amao-villa-psi.vercel.app/shizenkyo/">
+<meta property="og:image" content="https://amao-villa-psi.vercel.app/assets/shizenkyo-0.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="rt-property" content="amao-shizenkyo">
+<link rel="preload" as="image" href="/assets/shizenkyo-0.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://redirect-tracker-eta.vercel.app/api/site-tracker-js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "AMAO VILLA 自然郷", "description": "熱海・自然郷の一棟貸し「AMAO VILLA 自然郷」。天然ヒノキサウナ（ロウリュ可・最大7名）×水風呂×温泉。海を見下ろすブランコベンチ。一日一組・最大12名。", "image": "https://amao-villa-psi.vercel.app/assets/shizenkyo-0.jpg", "numberOfRooms": "1", "petsAllowed": false, "checkinTime": "16:00", "checkoutTime": "10:00", "occupancy": {"@type": "QuantitativeValue", "maxValue": 12}, "geo": {"@type": "GeoCoordinates", "latitude": 35.075, "longitude": 139.051}}</script>
+<style>
+:root{--bg:#f5f2ec;--ink:#1b232e;--ink2:#5a6472;--line:#e2ddd2;--navy:#161d26;--dark:#161d26;--cream:#f5f2ec;--en:'Manrope',sans-serif;--jp:'Zen Kaku Gothic New','Manrope',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--jp);color:var(--ink);background:var(--dark);font-weight:400;line-height:1.85;overflow-x:hidden;letter-spacing:.01em}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.en{font-family:var(--en)}
+button{font-family:inherit;border:none;background:none;cursor:pointer}
+#hd{position:fixed;top:0;left:0;width:100%;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;transition:.4s;color:var(--cream)}
+#hd.solid{background:var(--bg);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+#hd .logo{font-family:var(--en);font-weight:600;font-size:15px;letter-spacing:.3em;margin-right:-.3em}
+#hd .back{font-family:var(--jp);font-size:12px;font-weight:600;letter-spacing:.04em}
+.hero{height:88svh;min-height:520px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hero>img{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.12)}}
+@media(prefers-reduced-motion:reduce){.hero>img{animation:none}}
+.hero .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,16,22,.38),rgba(12,16,22,.05) 45%,rgba(12,16,22,.75))}
+.hero .c{position:relative;z-index:3;color:var(--cream);padding:0 24px 60px;max-width:680px}
+.hero .area{font-family:var(--en);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:rgba(245,242,236,.85)}
+.hero h1{font-family:var(--jp);font-weight:700;font-size:30px;letter-spacing:.02em;line-height:1.3;margin:12px 0 14px}
+.hero .tag{font-family:var(--jp);font-weight:400;font-size:14px;line-height:1.95;color:rgba(245,242,236,.92)}
+#light{position:relative;z-index:1;background:var(--bg);color:var(--ink);border-radius:26px 26px 0 0;margin-top:-26px}
+.sect{padding:56px 22px}.wide{max-width:1000px;margin:0 auto}
+.first{padding-top:44px}
+.eyebrow{font-family:var(--en);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink2);font-weight:700}
+h2.big{font-family:var(--jp);font-size:23px;line-height:1.6;font-weight:600;margin:14px 0 16px;text-wrap:balance}
+.lead{font-size:13.5px;line-height:2.1;color:#39424e;text-wrap:pretty}
+.introimg{margin:26px 0 0;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:#e4dfd4}.introimg img{width:100%;height:100%;object-fit:cover}
+.shead{margin-bottom:18px}.shead .en{font-family:var(--en);font-size:24px;font-weight:700;letter-spacing:-.01em}.shead .jp{font-size:13px;color:var(--ink2);margin-top:6px}
+#gallery{padding:54px 0}#gallery .shead{padding:0 22px}
+.gtop{display:flex;align-items:flex-end;justify-content:space-between;padding:0 22px;margin-bottom:14px;max-width:1000px;margin-left:auto;margin-right:auto}
+.gcount{font-family:var(--en);font-size:12px;color:var(--ink2)}.gcount b{color:var(--ink);font-weight:700}
+.gstrip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 22px 14px;scrollbar-width:none}.gstrip::-webkit-scrollbar{display:none}
+.gitem{flex:0 0 80%;scroll-snap-align:center;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:#e4dfd4}.gitem img{width:100%;height:100%;object-fit:cover}
+.facil{display:grid;grid-template-columns:1fr;gap:12px}
+.fc{border:1px solid var(--line);border-radius:14px;padding:18px 16px;background:#fff}
+.fc .no{font-family:var(--en);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--ink2)}
+.fc b{display:block;font-family:var(--jp);font-weight:600;font-size:15px;line-height:1.5;margin:6px 0 6px}
+.fc p{font-family:var(--jp);font-size:12.5px;color:var(--ink2);line-height:1.95}
+#feat{background:var(--dark);color:var(--cream)}
+#feat .shead .en{color:var(--cream)}#feat .shead .jp{color:#aab1bc}
+#feat .ph{border-radius:16px;overflow:hidden;aspect-ratio:16/10;margin:6px 0 24px;background:#10151c}#feat .ph img{width:100%;height:100%;object-fit:cover}
+#feat .lead{color:rgba(245,242,236,.82)}
+.spt{display:grid;grid-template-columns:1fr 1fr;gap:22px 26px;margin-top:26px}
+.sptv .e{font-family:var(--en);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#b9c3d2;font-weight:700}
+.sptv h4{font-family:var(--jp);font-size:15.5px;font-weight:600;margin:5px 0 5px}
+.sptv p{font-size:12.5px;color:rgba(245,242,236,.72);line-height:1.85}
+#spec{background:#efe9df}
+.specgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
+.specgrid .s{border:1px solid var(--line);border-radius:12px;padding:13px 15px;background:#fff}
+.specgrid .s span{font-family:var(--en);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);font-weight:600}
+.specgrid .s b{display:block;font-family:var(--jp);font-weight:600;font-size:13.5px;margin-top:3px;line-height:1.5}
+.amh{font-family:var(--jp);font-weight:600;font-size:16px;margin:28px 0 8px}
+.amenlist{display:grid;grid-template-columns:1fr;gap:0}
+.amenlist .a{display:flex;align-items:center;gap:12px;padding:10px 2px;border-bottom:1px solid var(--line);font-family:var(--jp);font-size:13px;color:var(--ink)}
+.amenlist .a:before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--navy);opacity:.5}
+.faq .q{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:16px 2px;font-family:var(--jp);font-weight:600;font-size:14px;display:flex;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .mk{margin-left:auto;color:var(--ink2);transition:.2s;font-size:18px;font-weight:400}
+.faq details[open] summary .mk{transform:rotate(45deg)}
+.faq .ans{padding:0 2px 18px;font-size:12.5px;color:var(--ink2);line-height:1.95}
+#access .ablk{padding:14px 0;border-bottom:1px solid var(--line)}
+#access .ablk .lbl{font-family:var(--en);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);font-weight:700;margin-bottom:7px}
+#access .ablk .v{font-family:var(--jp);font-size:13.5px;color:var(--ink);line-height:1.9}
+#access #mini{height:300px;border-radius:16px;overflow:hidden;border:1px solid var(--line);z-index:1;margin-top:18px}
+#access .gmap{display:inline-block;margin-top:16px;font-family:var(--en);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-bottom:1.5px solid var(--ink);padding-bottom:3px}
+.leaflet-tooltip.mtip{background:var(--dark);color:var(--cream);border:none;border-radius:7px;font-family:var(--jp);font-weight:500;font-size:12px;padding:4px 9px}
+.mpin span{display:block;width:15px;height:15px;border-radius:50%;background:var(--navy);border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.35)}
+.cta{position:relative;text-align:center;padding:104px 24px;color:var(--cream);overflow:hidden}
+.cta .ctabg{position:absolute;inset:0;z-index:0}.cta .ctabg img{width:100%;height:100%;object-fit:cover}
+.cta .ctabg:after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,16,22,.45),rgba(12,16,22,.62))}
+.cta .inner{position:relative;z-index:2}
+.cta .big{font-family:var(--jp);font-size:22px;font-weight:600;line-height:1.55;margin-bottom:8px;color:var(--cream)}
+.cta p{font-size:12.5px;color:rgba(245,242,236,.85);margin-bottom:26px;letter-spacing:.02em}
+.cta a.book{display:inline-block;background:#fff;color:var(--dark);font-family:var(--jp);font-weight:700;font-size:15px;padding:16px 52px;border-radius:999px;box-shadow:0 12px 32px rgba(0,0,0,.3)}
+.cta a.other{display:block;margin-top:22px;font-family:var(--jp);font-size:13px;color:rgba(245,242,236,.9);text-decoration:underline;text-underline-offset:3px}
+.note{max-width:560px;margin:0 auto;font-size:11px;color:var(--ink2);text-align:center;padding:22px;line-height:1.8;background:var(--bg)}
+footer{background:var(--bg);color:var(--ink);padding:30px 22px calc(110px + env(safe-area-inset-bottom));text-align:center}
+footer .logo{font-family:var(--en);font-size:18px;font-weight:600;letter-spacing:.3em;margin-right:-.3em}
+footer .nav{display:flex;justify-content:center;gap:18px;font-family:var(--en);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin:16px 0;font-weight:500}
+footer .cp{font-family:var(--en);font-size:10px;letter-spacing:.14em;color:var(--ink2);text-transform:uppercase}
+#bookbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:70;background:#fff;border-radius:20px;box-shadow:0 12px 34px rgba(12,16,22,.25);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 12px 12px 20px;max-width:520px;margin:0 auto}
+#bookbar .p b{font-family:var(--jp);font-size:20px;font-weight:700;letter-spacing:-.01em}
+#bookbar .p .u{font-size:12px;color:var(--ink2)}
+#bookbar .p .n{display:block;font-family:var(--jp);font-size:10px;letter-spacing:.04em;color:var(--ink2);margin-top:1px;font-weight:600}
+#bookbar a{flex:none;background:var(--dark);color:var(--cream);border-radius:15px;padding:12px 26px;font-family:var(--jp);font-weight:700;font-size:15px;text-align:center;line-height:1.15}
+#bookbar a small{display:block;font-family:var(--en);font-size:9px;letter-spacing:.1em;opacity:.78;font-weight:700;margin-bottom:1px}
+.reveal{opacity:0;transform:translateY(20px);transition:.8s}.reveal.in{opacity:1;transform:none}
+@media(min-width:720px){.hero h1{font-size:44px}.sect{padding:80px 40px}.gitem{flex-basis:34%}.facil{grid-template-columns:1fr 1fr}.specgrid{grid-template-columns:repeat(3,1fr)}.amenlist{grid-template-columns:1fr 1fr;gap:0 32px}.spt{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<header id="hd"><a href="/" class="logo">AMAO VILLA</a><a href="/#villas" class="back">← 宿一覧</a></header>
+<section class="hero">
+  <img alt="AMAO VILLA 自然郷 の外観" src="/assets/shizenkyo-0.jpg">
+  <div class="ov"></div>
+  <div class="c"><div class="area">静岡県 熱海市 自然郷</div><h1>AMAO VILLA 自然郷</h1><div class="tag">1階まるごとサウナとデッキ。<br>熱海の海を見下ろす、3階建ての別荘。</div></div>
+</section>
+<main id="light">
+  <section class="sect wide first reveal">
+    <div class="eyebrow">Concept</div>
+    <h2 class="big">サウナのために、<br>1フロアを贅沢に。</h2>
+    <p class="lead">熱海から車で15分の別荘地・自然郷にある、一日一組限定の宿です。3階建ての4LDKで、1階にはBBQのできるデッキに加えて、贅沢にサウナを完備しました。生活空間は2階・3階。吹き抜けの開放的なリビングに設置したブランコベンチからは、眼下に広がる熱海の海を眺めることができます。</p>
+    <div class="introimg"><img loading="lazy" alt="AMAO VILLA 自然郷 の室内" src="/assets/shizenkyo-2.jpg"></div>
+  </section>
+
+  <section id="gallery" class="reveal">
+    <div class="shead wide"><div class="en">Gallery</div><div class="jp">館内の様子をご紹介します。</div></div>
+    <div class="gtop"><div class="gcount"><b id="gnow">01</b> / <span id="gtot"></span></div><div class="en" style="font-size:11px;letter-spacing:.18em;color:var(--ink2);font-weight:600">SWIPE →</div></div>
+    <div class="gstrip" id="gstrip"></div>
+  </section>
+
+  <section class="sect wide reveal">
+    <div class="shead"><div class="en">Facilities</div><div class="jp">設備・空間 ─ 一日一組・最大12名で貸切。</div></div>
+    <div class="facil"><div class="fc reveal"><div class="no">01 ・ Hinoki Sauna</div><b>天然ヒノキのサウナ</b><p>最大7名まで同時に入れる広々としたサウナ。ロウリュが可能で、最高85度まで上がります（温度は季節により変わります）。※有料オプション（11,000円/日・水着着用）です。</p></div><div class="fc reveal"><div class="no">02 ・ Cold Bath</div><b>水風呂とインフィニティチェア</b><p>もちろん水風呂もご用意。外気浴用のインフィニティチェアは4脚あります。極上の「ととのい」をお楽しみください。</p></div><div class="fc reveal"><div class="no">03 ・ Onsen</div><b>温泉のお風呂</b><p>お風呂は温泉です。サウナとはまた違う、ゆったりとした癒しの時間を。</p></div><div class="fc reveal"><div class="no">04 ・ BBQ Deck</div><b>屋根つきデッキでBBQ</b><p>1階のデッキでBBQができます（有料 5,000円/滞在・9:00〜21:00・ガス式）。屋根があるので雨の日でもご利用いただけます。</p></div><div class="fc reveal"><div class="no">05 ・ Swing Bench</div><b>海を見下ろすブランコベンチ</b><p>吹き抜けのリビングに室内ブランコベンチを設置。眼下に広がる熱海の海を眺めながら、ゆらゆらと。</p></div><div class="fc reveal"><div class="no">06 ・ Projector</div><b>プロジェクターのある夜</b><p>Prime VideoやYouTubeを投影できます。HDMI接続でお持ちのコンテンツも投影可能です。</p></div></div>
+  </section>
+
+  <section id="feat" class="sect reveal"><div class="wide">
+    <div class="shead"><div class="en">Sauna Floor</div><div class="jp">ロウリュで、ととのう。</div></div>
+    <div class="ph"><img loading="lazy" alt="天然ヒノキのサウナルーム" src="/assets/shizenkyo-3.jpg"></div>
+    <p class="lead">天然ヒノキのサウナはロウリュ可能。水風呂に浸かり、インフィニティチェアで外気浴。1階フロアまるごと、ととのいのための空間です。</p>
+    <div class="spt"><div class="sptv"><div class="e">Löyly</div><h4>ロウリュ可</h4><p>蒸気と香りで、体感温度を自分好みに。</p></div><div class="sptv"><div class="e">7 persons</div><h4>最大7名</h4><p>みんなで同時に入れる広さです。</p></div><div class="sptv"><div class="e">Cold Bath</div><h4>水風呂</h4><p>クールダウンは水風呂で。チェアは4脚。</p></div><div class="sptv"><div class="e">Onsen</div><h4>温泉も</h4><p>仕上げは温泉。贅沢な組み合わせです。</p></div></div>
+  </div></section>
+
+  <section id="spec" class="sect reveal"><div class="wide">
+    <div class="shead"><div class="en">Room Information</div><div class="jp">客室・設備情報。</div></div>
+    <div class="specgrid"><div class="s"><span>定員</span><b>最大12名</b></div><div class="s"><span>間取り</span><b>3階建て 4LDK</b></div><div class="s"><span>チェックイン</span><b>16:00〜22:00</b></div><div class="s"><span>チェックアウト</span><b>〜10:00</b></div><div class="s"><span>ペット</span><b>不可</b></div><div class="s"><span>駐車場</span><b>乗用車3〜4台</b></div></div>
+    <div class="amh">寝室・寝具</div>
+    <div class="amenlist"><div class="a">洋室① ─ クイーンベッド×1</div><div class="a">洋室② ─ シングルベッド×2・セミダブルベッド×2</div><div class="a">洋室③ ─ シングルベッド×2</div><div class="a">和室 ─ 布団セット4組</div></div>
+    <div class="amh">設備・アメニティ</div>
+    <div class="amenlist"><div class="a">天然ヒノキサウナ（有料 11,000円/日）</div><div class="a">水風呂</div><div class="a">インフィニティチェア4脚</div><div class="a">温泉</div><div class="a">屋根つきBBQデッキ（有料 5,000円/滞在）</div><div class="a">室内ブランコベンチ</div><div class="a">プロジェクター（Prime Video / YouTube / HDMI）</div><div class="a">洗濯機・乾燥機</div><div class="a">Wi-Fi</div><div class="a">エアコン</div><div class="a">冷蔵庫・冷凍庫・電子レンジ・炊飯器・BALMUDAトースター</div><div class="a">調理器具・食器・調味料</div><div class="a">コーヒーセット</div><div class="a">バスアメニティ・タオル類</div></div>
+  </div></section>
+
+  <section id="faq" class="sect wide reveal">
+    <div class="shead"><div class="en">FAQ</div><div class="jp">よくある質問。</div></div>
+    <div class="faq"><details class="q" open><summary>1日何組まで泊まれますか？<span class="mk">+</span></summary><div class="ans">一日一組限定の一棟貸切です。</div></details><details class="q"><summary>チェックイン・チェックアウトの時間は？<span class="mk">+</span></summary><div class="ans">チェックイン 16:00〜22:00 / チェックアウト 〜10:00。キーパッドを使った無人チェックインです。方法は宿泊日3日前にご案内します。</div></details><details class="q"><summary>サウナの料金は？<span class="mk">+</span></summary><div class="ans">11,000円/日です。水着を着用してください。連泊で連日ご利用の場合は、正午を過ぎたら再度のお支払いをお願いしています。</div></details><details class="q"><summary>BBQはできますか？<span class="mk">+</span></summary><div class="ans">屋根つきデッキでガス式グリルをご利用いただけます（5,000円/1滞在・9:00〜21:00）。雨の日でも利用可能です（強風時はお控えください）。</div></details><details class="q"><summary>階段があると聞きました<span class="mk">+</span></summary><div class="ans">駐車スペースから玄関まで約55〜60段の階段がございます。足腰に不安のある方はご注意ください。</div></details><details class="q"><summary>買い物はどこでできますか？<span class="mk">+</span></summary><div class="ans">宅配可能な店がほとんどないため、事前のお買い物をおすすめします。最寄りはマックスバリュ多賀熱海店（車で約15分）です。</div></details><details class="q"><summary>電波は入りますか？<span class="mk">+</span></summary><div class="ans">山間部のため電波が悪くなっています。Wi-Fiはございます。</div></details><details class="q"><summary>キャンセル料は？<span class="mk">+</span></summary><div class="ans">当日〜5日前100%／6〜7日前80%／8〜14日前50%／15〜21日前20%／22日前〜無料です。</div></details></div>
+  </section>
+
+  <section id="access" class="sect wide reveal">
+    <div class="shead"><div class="en">Access</div><div class="jp">アクセス。</div></div>
+    <p class="lead">熱海から車で約15分の別荘地・自然郷。閑静な山あいで、眼下に熱海の海が広がります。</p>
+    <div class="adetail"></div>
+    <a class="gmap en" href="https://www.google.com/maps/search/?api=1&query=熱海+自然郷" target="_blank" rel="noopener">Open in Google Maps →</a>
+    <div id="mini"></div>
+    
+  </section>
+
+  <section class="cta">
+    <div class="ctabg"><img alt="" src="/assets/shizenkyo-0.jpg"></div>
+    <div class="inner">
+      <div class="big">AMAO VILLA 自然郷 で、特別な一日を。</div>
+      <p>一日一組限定 ・ 最大12名 ・ ¥7,100〜/人</p>
+      <a class="book" id="ctaBook" href="#" target="_blank" rel="noopener">空室・料金を見る</a>
+      <a class="other" href="/#villas">AMAO VILLA の他の宿を見る</a>
+    </div>
+  </section>
+  <p class="note">※ 写真は公式写真です。料金は時期・人数により変動します（人数制・1名あたりの目安）。詳細・最新情報は予約ページをご確認ください。</p>
+  <footer>
+    <div class="logo">AMAO VILLA</div>
+    <div class="nav"><a href="/#villas">Villas</a><a href="/#compare">Compare</a><a href="/#map">Map</a></div>
+    <div class="cp">© AMAO VILLA — Luxe Villas 伊豆</div>
+  </footer>
+</main>
+<div id="bookbar"><div class="p"><b>¥7,100</b> <span class="u">〜/人</span><span class="n">一日一組 ・ 最大12名</span></div><a id="bbBook" href="#" target="_blank" rel="noopener">予約する</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  var TRACKER='https://redirect-tracker-eta.vercel.app/api/redirect', PID='amao-shizenkyo';
+  var SRC_KEY='_amao_src',SRC_T='_amao_src_t',TTL=30*864e5;
+  function norm(s){s=(s||'').toLowerCase();if(!s)return null;if(s.indexOf('insta')>-1||s==='ig')return 'instagram';if(s.indexOf('tiktok')>-1||s==='tt')return 'tiktok';return s.replace(/[^a-z0-9_-]/g,'').slice(0,32)||null}
+  try{var q=new URLSearchParams(location.search);var u=norm(q.get('utm_source'));if(u){localStorage.setItem(SRC_KEY,u);localStorage.setItem(SRC_T,String(Date.now()))}}catch(e){}
+  function src(){try{var s=localStorage.getItem(SRC_KEY),t=parseInt(localStorage.getItem(SRC_T)||'0',10);if(s&&Date.now()-t<TTL)return s}catch(e){}return 'direct'}
+  function bookUrl(cta){return TRACKER+'?p='+PID+'&s='+encodeURIComponent(src())+'&cta='+cta}
+  var bb=document.getElementById('bbBook'),cb=document.getElementById('ctaBook');
+  function setLinks(){bb.href=bookUrl('detail_bookbar');cb.href=bookUrl('detail_cta')}
+  setLinks();
+  document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('#bbBook,#ctaBook'):null;if(a)setLinks()},true);
+
+  // Gallery
+  var gal=["https://media.xmlcal.com/pic/p0029/6778/01.800.png", "https://media.xmlcal.com/pic/p0029/6778/02.800.png", "https://media.xmlcal.com/pic/p0029/6778/03.800.png", "https://media.xmlcal.com/pic/p0029/6778/04.800.png", "https://media.xmlcal.com/pic/p0029/6778/05.800.png", "https://media.xmlcal.com/pic/p0029/6778/06.800.png", "https://media.xmlcal.com/pic/p0029/6778/07.800.png", "https://media.xmlcal.com/pic/p0029/6778/08.800.png", "https://media.xmlcal.com/pic/p0029/6778/09.800.png", "https://media.xmlcal.com/pic/p0029/6778/10.800.png", "https://media.xmlcal.com/pic/p0029/6778/11.800.png", "https://media.xmlcal.com/pic/p0029/6778/12.800.png", "https://media.xmlcal.com/pic/p0029/6778/13.800.png", "https://media.xmlcal.com/pic/p0029/6778/14.800.png"];
+  var strip=document.getElementById('gstrip');
+  document.getElementById('gtot').textContent=gal.length;
+  strip.innerHTML=gal.map(function(s){return '<div class="gitem"><img loading="lazy" alt="AMAO VILLA 自然郷 の写真" src="'+s+'" onerror="this.parentNode.remove()"></div>'}).join('');
+  var gnow=document.getElementById('gnow');
+  strip.addEventListener('scroll',function(){var it=strip.children;var c=strip.scrollLeft+strip.clientWidth/2;var idx=0;for(var i=0;i<it.length;i++){if(it[i].offsetLeft<=c)idx=i}gnow.textContent=(idx+1<10?'0':'')+(idx+1)},{passive:true});
+
+  // header + reveal
+  var hd=document.getElementById('hd');
+  window.addEventListener('scroll',function(){hd.classList.toggle('solid',(window.scrollY||0)>window.innerHeight*0.7)},{passive:true});
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.05});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight*1.15)el.classList.add('in')})},700)}
+  else document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+
+  // map
+  function initMap(){
+    if(typeof L==='undefined'){setTimeout(initMap,300);return}
+    var ll=[35.075, 139.051];
+    var map=L.map('mini',{scrollWheelZoom:false,zoomControl:true}).setView(ll,13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap contributors'}).addTo(map);
+    L.marker(ll,{icon:L.divIcon({className:'mpin',html:'<span></span>',iconSize:[16,16],iconAnchor:[8,8]})}).addTo(map).bindTooltip('AMAO VILLA 自然郷',{permanent:true,direction:'top',className:'mtip',offset:[0,-8]});
+    var mo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setTimeout(function(){map.invalidateSize()},200)})});mo.observe(document.getElementById('mini'));
+  }
+  initMap();
+})();
+</script>
+</body>
+</html>

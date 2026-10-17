@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://amao-villa-psi.vercel.app/</loc><lastmod>2026-09-27</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<url><loc>https://amao-villa-psi.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<url><loc>https://amao-villa-psi.vercel.app/midori/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://amao-villa-psi.vercel.app/izukogen/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://amao-villa-psi.vercel.app/atami/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://amao-villa-psi.vercel.app/jogasaki/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://amao-villa-psi.vercel.app/futo/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://amao-villa-psi.vercel.app/shizenkyo/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

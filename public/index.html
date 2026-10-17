@@ -75,8 +75,8 @@ nav.gnav a{opacity:.85}nav.gnav a:hover{opacity:1}
 .cbody{padding:16px 16px 18px}
 .card h3{font-family:var(--jp);font-weight:700;font-size:18.5px;line-height:1.45;margin:2px 0 2px}
 .carea{font-size:11.5px;color:var(--ink2)}
-.ctag{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}
-.ctag span{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:#faf8f4;color:var(--ink2)}
+.ctag{display:flex;flex-wrap:wrap;gap:6px;margin:11px 0 0}
+.ctag span{font-size:10.5px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:#faf8f4;color:var(--ink2)}
 .t-sauna{background:#fdf0e7!important;border-color:#f0d5bd!important;color:#a85a24!important}
 .t-onsen{background:#fdecec!important;border-color:#f2d0d0!important;color:#bb4a46!important}
 .t-jacuzzi{background:#e8f4f8!important;border-color:#cbe4ee!important;color:#2e7f9c!important}
@@ -87,26 +87,29 @@ nav.gnav a{opacity:.85}nav.gnav a:hover{opacity:1}
 .t-fire{background:#fdeee6!important;border-color:#f2d3c2!important;color:#bb4f2a!important}
 .t-screen{background:#efeef8!important;border-color:#d9d6ef!important;color:#5a53a5!important}
 .clead{font-size:12px;line-height:1.95;margin:10px 0 2px;color:#39424e}
-.cspec{display:flex;gap:22px;margin:14px 0 20px;font-size:12.5px;color:var(--ink2)}
-.cspec b{font-family:var(--en);font-size:19px;font-weight:500;color:var(--ink);margin-right:3px}
-.cbtn{display:flex;gap:10px;flex-wrap:wrap}
-.book{flex:1;min-width:200px;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--navy);color:#fff;font-weight:600;font-size:14px;padding:15px 26px;border-radius:12px;transition:background .15s}
-.book:hover{background:#2a3546}
-.book small{font-family:var(--en);font-size:9px;letter-spacing:.18em;opacity:.75;font-weight:600}
-.cprice{display:flex;align-items:baseline;gap:7px;margin-top:8px;line-height:1.3}
-.cprice b{font-size:19px;font-weight:700;font-variant-numeric:lining-nums}
+.meta2{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.arrow{flex:none;font-family:var(--jp);font-size:11.5px;letter-spacing:.04em;display:inline-flex;align-items:center;gap:7px;font-weight:700;border-radius:999px;padding:9px 17px;background:var(--navy);color:#fff;transition:.18s}
+.arrow:active{transform:scale(.96)}
+.cprice{line-height:1.35}
+.cprice b{font-size:17px;font-weight:700;font-variant-numeric:lining-nums}
 .cprice .u{font-size:11px;color:var(--ink2)}
-.cprice .n{font-size:11px;color:var(--ink2)}
+.cprice .n{display:block;font-size:10.5px;color:var(--ink2)}
+.cprice.sold b{color:var(--ink2)}
 /* compare */
 .cmpwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px}
 .cmpwrap::-webkit-scrollbar{height:0}
 table.cmp{border-collapse:separate;border-spacing:0;min-width:860px;width:100%;background:var(--card);border-radius:14px;overflow:hidden}
 .cmp th,.cmp td{padding:13px 14px;border-bottom:1px solid var(--line);font-size:13px;text-align:center;vertical-align:middle}
-.cmp thead th{background:var(--navy);color:#fff;font-family:var(--jp);font-weight:600;font-size:13.5px;line-height:1.5;padding:16px 10px}
+.cmp thead th{background:var(--card);font-family:var(--jp);font-weight:600;font-size:13.5px;line-height:1.5;padding:16px 10px;vertical-align:top}
 .cmp .attr{position:sticky;left:0;background:#efe9df;font-weight:600;font-size:12px;white-space:nowrap;text-align:left;z-index:2;min-width:88px}
-.cmp thead .attr{background:var(--navy)}
+.cmp thead .attr{background:var(--card)}
 .cmp .ok{color:#2c7a4b;font-weight:700}
 .cmp .no{color:#c9c2b6}
+.sname{min-width:150px}
+.sname .sthumb{display:block;width:100%;max-width:150px;height:0;padding-top:66.67%;border-radius:11px;overflow:hidden;background-color:#d8d7c4;background-size:cover;background-position:center;margin:0 auto 10px}
+.sname b{display:block;font-family:var(--jp);font-weight:600;font-size:14px;line-height:1.35}
+.sname small{display:block;font-family:var(--jp);font-size:10px;letter-spacing:.06em;color:var(--ink2);font-weight:500;margin-top:3px}
+.dlink{font-family:var(--jp);font-size:11.5px;font-weight:700;letter-spacing:.04em;color:var(--ink);border-bottom:1.5px solid var(--ink);padding-bottom:3px}
 .cmp .bkc a{display:inline-block;background:var(--navy);color:#fff;font-size:12px;font-weight:600;padding:9px 16px;border-radius:999px;white-space:nowrap}
 .cmp-note{font-size:11.5px;color:var(--ink2);margin-top:12px;text-align:center}
 /* map */
@@ -195,7 +198,7 @@ footer .brand2{font-family:var(--en);letter-spacing:.3em;margin-right:-.3em;colo
 {"@type":"ListItem","position":3,"item":{"@type":"LodgingBusiness","name":"AMAO VILLA 熱海","image":"https://amao-villa-psi.vercel.app/assets/atami-0.jpg","address":{"@type":"PostalAddress","addressRegion":"静岡県","addressLocality":"熱海"}}},
 {"@type":"ListItem","position":4,"item":{"@type":"LodgingBusiness","name":"AMAO VILLA 城ヶ崎","image":"https://amao-villa-psi.vercel.app/assets/jogasaki-0.jpg","address":{"@type":"PostalAddress","addressRegion":"静岡県","addressLocality":"伊東市 城ヶ崎"}}},
 {"@type":"ListItem","position":5,"item":{"@type":"LodgingBusiness","name":"AMAO VILLA 富戸","image":"https://amao-villa-psi.vercel.app/assets/futo-0.jpg","address":{"@type":"PostalAddress","addressRegion":"静岡県","addressLocality":"伊東市 富戸"}}},
-{"@type":"ListItem","position":6,"item":{"@type":"LodgingBusiness","name":"AMAO VILLA 自然郷","image":"https://amao-villa-psi.vercel.app/assets/shizenkyo-0.jpg","address":{"@type":"PostalAddress","addressRegion":"静岡県","addressLocality":"伊豆 自然郷"}}}]}</script>
+{"@type":"ListItem","position":6,"item":{"@type":"LodgingBusiness","name":"AMAO VILLA 自然郷","image":"https://amao-villa-psi.vercel.app/assets/shizenkyo-0.jpg","address":{"@type":"PostalAddress","addressRegion":"静岡県","addressLocality":"熱海 自然郷"}}}]}</script>
 </head>
 <body>
 <header id="hd">
@@ -288,30 +291,30 @@ footer .brand2{font-family:var(--en);letter-spacing:.3em;margin-right:-.3em;colo
 <script>
 var TRACKER='https://redirect-tracker-eta.vercel.app/api/redirect';
 var V=[
- {id:'amao-midori',price:null,en:'IZU KOGEN — NEW OPEN',name:'Villa 緑と物語 IZU ROKUSYO',area:'伊豆高原（伊豆急行 伊豆高原駅エリア）',isNew:true,cap:10,bed:'ベッド6台・布団4組',
+ {id:'amao-midori',slug:'midori',price:null,en:'IZU KOGEN — NEW OPEN',name:'Villa 緑と物語 IZU ROKUSYO',area:'伊豆高原',isNew:true,cap:10,bed:'ベッド6台・布団4組',
   tags:['サウナ','ジャグジー','大型スクリーン','暖炉','BBQ'],
-  lead:'森の静けさに包まれる、たった一組のための別邸。外気を感じるサウナとジャグジー、大型スクリーンで過ごす夜。あなただけの物語がはじまる森の邸宅。',
-  imgs:['midori-0','midori-1','midori-2','midori-3'],alts:['夕暮れに灯るVilla 緑と物語の外観','木々に開いたキッチンとカウンター','森を望むリビングのソファ','夜の中庭と焚き火スペース']},
- {id:'amao-izukogen',price:7100,en:'IZU KOGEN',name:'AMAO VILLA 伊豆高原',area:'伊豆高原',cap:12,bed:'ベッド5台・布団5組',
-  tags:['ドッグラン','ペットOK','温泉','BBQ','暖炉・焚き火','絶景'],
-  lead:'ドッグラン付き。愛犬と暮らすように泊まる森のヴィラ。庭を駆けまわる犬たちと、温泉と、緑に開いたリビング。最大12名で貸し切る伊豆高原の休日。',
+  lead:'590㎡の敷地に、本棟と、サウナ・ジャグジーの別棟を備えた森の別邸です。入口の門をくぐると、貸切ホテルのような時間が始まります。ベッドはSIMMONS、家電はBALMUDAで揃えました。身も心も癒される非日常を、ご堪能ください。',
+  imgs:['midori-0','midori-1','midori-2','midori-3'],alts:['夕暮れに灯るVilla 緑と物語の外観','木々に開いたキッチンとカウンター','森を望むリビングのソファ','夜の中庭とアウトドアリビング']},
+ {id:'amao-izukogen',slug:'izukogen',price:7100,en:'IZU KOGEN',name:'AMAO VILLA 伊豆高原',area:'伊豆高原',cap:13,bed:'ベッド5台・布団6組',
+  tags:['ドッグラン','ペットOK','温泉','BBQ','焚き火','大型スクリーン'],
+  lead:'1,000㎡超の敷地にドッグランを備えた、和モダンの温泉宿です。庭は愛犬に開放、頭数制限はありません。夜は120インチスクリーンと5.1chサラウンドで、映画館のように。最大13名様まで、一棟まるごとお使いいただけます。',
   imgs:['izukogen-0','izukogen-1','izukogen-2','izukogen-3'],alts:['芝の庭で遊ぶ犬とAMAO VILLA伊豆高原','梁を生かした開放的なリビングダイニング','木のぬくもりある寝室','リビングでくつろぐ犬と家族の空間']},
- {id:'amao-atami',price:6800,en:'ATAMI',name:'AMAO VILLA 熱海',area:'熱海',cap:10,bed:'ベッド6台・布団1組',
-  tags:['オーシャンビュー','絶景','BBQ'],
-  lead:'相模湾と初島を一望する高台の邸宅。夕暮れ、海と空が染まる時間を特等席で。都心から近い熱海で、景色ごと貸し切る滞在を。',
-  imgs:['atami-0','atami-1','atami-2','atami-3'],alts:['相模湾と初島を望む夕景','落ち着いたトーンのリビング','間接照明の寝室','竹と水盤のある静かな空間']},
- {id:'amao-jogasaki',price:4600,en:'JOGASAKI',name:'AMAO VILLA 城ヶ崎',area:'伊東市 城ヶ崎',cap:11,bed:'ベッド6台・布団5組',
-  tags:['ペットOK','温泉','BBQ'],
-  lead:'城ヶ崎の緑に開いた、愛犬と寛ぐ一棟貸し。広いリビングと庭、温泉。犬も人も、思いきり伸びをして過ごせる場所。',
-  imgs:['jogasaki-0','jogasaki-1','jogasaki-2','jogasaki-3'],alts:['リビングでくつろぐ犬とソファ','庭を駆ける犬','明るい寝室','障子から光が差す和室']},
- {id:'amao-futo',price:6800,en:'FUTO',name:'AMAO VILLA 富戸',area:'伊東市 富戸',cap:9,bed:'ベッド7台',
-  tags:['サウナ','温泉','暖炉・焚き火'],
-  lead:'Harviaサウナと温泉、火を囲む夜のための邸宅。吹き抜けの中庭を中心に、静かに整い、深く休む。大人の隠れ家。',
-  imgs:['futo-0','futo-1','futo-2','futo-3'],alts:['吹き抜けの中庭と縁側','Harviaストーブの本格サウナ','火を囲むリビング','窓辺のベンチルーム']},
- {id:'amao-shizenkyo',price:7100,en:'IZU SHIZENKYO',name:'AMAO VILLA 自然郷',area:'伊豆 自然郷',cap:12,bed:'ベッド7台・布団4組',
-  tags:['サウナ','温泉','オーシャンビュー','BBQ','絶景'],
-  lead:'海を見下ろすスイングベッドと絶景バス。サウナで整い、湯に浸かり、海を眺める。眺望のすべてを貸し切る12名の邸宅。',
-  imgs:['shizenkyo-0','shizenkyo-1','shizenkyo-2','shizenkyo-3'],alts:['海を望む明るいリビング','海を見下ろすスイングベッド','絶景の浴室','木のサウナルーム']}
+ {id:'amao-atami',slug:'atami',price:6800,en:'ATAMI',name:'AMAO VILLA 熱海',area:'熱海・伊豆山',cap:10,bed:'ベッド6台・布団2組',
+  tags:['オーシャンビュー','絶景','BBQ','大型スクリーン'],
+  lead:'海を望む空中テラスが自慢の、デザイナーズリノベーションの別荘です。約70段の階段を上った先は、誰にも邪魔されないプライベート空間。バルコニーでのBBQと夕景、条件が良ければ満天の星空もお楽しみいただけます。',
+  imgs:['atami-0','atami-1','atami-2','atami-3'],alts:['相模湾を望む空中テラスの夕景','落ち着いたトーンのリビング','間接照明の寝室','竹と水盤のある静かな空間']},
+ {id:'amao-jogasaki',slug:'jogasaki',price:4600,en:'JOGASAKI',name:'AMAO VILLA 城ヶ崎',area:'伊豆高原・城ヶ崎',cap:11,bed:'ベッド6台・布団4組',
+  tags:['ドッグラン','ペットOK','温泉','BBQ'],
+  lead:'人工芝のドッグランと温泉を備えた、愛犬ファーストの一棟貸しです。室内はどこでも愛犬と一緒、大型犬も頭数制限なくお迎えします。広いバルコニーでBBQをしながら、犬も人も思いきり伸びをしてお過ごしください。',
+  imgs:['jogasaki-0','jogasaki-1','jogasaki-2','jogasaki-3'],alts:['リビングでくつろぐ犬とソファ','人工芝のドッグランを駆ける犬','明るい寝室','障子から光が差す和室']},
+ {id:'amao-futo',slug:'futo',price:6800,en:'FUTO',name:'AMAO VILLA 富戸',area:'伊東市 富戸（城ヶ崎海岸駅 徒歩10分）',cap:9,bed:'ベッド7台',
+  tags:['サウナ','温泉','水風呂','暖炉'],
+  lead:'建築家・北山恒氏の設計による、ガラス張りの中庭を囲む邸宅です。最大8名が入れる天然ヒノキのサウナは、最高95度まで上がります。天然温泉と水風呂の2つの浴槽で、極上の「ととのい」をどうぞ。',
+  imgs:['futo-0','futo-1','futo-2','futo-3'],alts:['吹き抜けの中庭と縁側','天然ヒノキの本格サウナ','火を囲むリビング','窓辺のベンチルーム']},
+ {id:'amao-shizenkyo',slug:'shizenkyo',price:7100,en:'ATAMI SHIZENKYO',name:'AMAO VILLA 自然郷',area:'熱海・自然郷',cap:12,bed:'ベッド7台・布団4組',
+  tags:['サウナ','温泉','水風呂','オーシャンビュー','BBQ'],
+  lead:'1階にサウナとBBQデッキを贅沢に構えた、3階建ての別荘です。天然ヒノキのサウナはロウリュ可能で最大7名、水風呂とインフィニティチェアもご用意。吹き抜けのリビングのブランコベンチから、眼下に熱海の海を望めます。',
+  imgs:['shizenkyo-0','shizenkyo-1','shizenkyo-2','shizenkyo-3'],alts:['海を望む明るいリビング','海を見下ろすブランコベンチ','浴室からの眺望','天然ヒノキのサウナルーム']}
 ];
 // ===== 帰属: 着地utmを保存し、予約リンクのs=に反映 =====
 var SRC_KEY='_amao_src',SRC_T='_amao_src_t',TTL=30*864e5;
@@ -321,7 +324,7 @@ function src(){try{var s=localStorage.getItem(SRC_KEY),t=parseInt(localStorage.g
 function tagCls(t){
  if(t.indexOf('サウナ')>-1)return 't-sauna';
  if(t.indexOf('温泉')>-1)return 't-onsen';
- if(t.indexOf('ジャグジー')>-1)return 't-jacuzzi';
+ if(t.indexOf('ジャグジー')>-1||t.indexOf('水風呂')>-1)return 't-jacuzzi';
  if(t.indexOf('オーシャン')>-1||t==='海の眺望')return 't-sea';
  if(t.indexOf('絶景')>-1)return 't-view';
  if(t.indexOf('ペット')>-1||t.indexOf('ドッグ')>-1)return 't-pet';
@@ -339,18 +342,18 @@ function renderCards(){
   return '<article class="card'+(av==='no'?' full':'')+'" id="'+p.id+'">'
   +'<div class="cgal">'+p.imgs.map(function(im,i){return '<div>'+(i===0&&p.isNew?'<span class="new">NEW OPEN</span>':'')+'<img src="/assets/'+im+'.jpg" alt="'+p.alts[i]+'" loading="'+(p.isNew&&i===0?'eager':'lazy')+'"></div>'}).join('')+'</div>'
   +'<div class="cbody"><h3>'+p.name+'</h3><div class="carea">'+p.area+'</div>'
-  +'<div class="cprice'+(av==='no'?' sold':'')+'">'+(av==='no'?'<b>満室</b>':(p.price?'<b>¥'+p.price.toLocaleString()+'</b><span class="u">〜/人</span>':''))+'<span class="n">最大'+p.cap+'名</span></div>'
   +'<div class="ctag">'+p.tags.map(function(t){return '<span class="'+tagCls(t)+'">'+t+'</span>'}).join('')+'</div>'
   +'<p class="clead">'+p.lead+'</p>'
   +(av?(av==='ok'?'<a class="avl ok" data-book data-p="'+p.id+'" data-cta="datesearch" href="'+bookUrl(p.id,'datesearch')+'" target="_blank" rel="noopener">◯ 空室あり ─ 予約へ進む →</a>':'<div class="avl '+av+'">'+(av==='no'?'✕ 満室':'空室を確認してください')+'</div>'):'')
-  +'<div class="cbtn"><a class="book" data-book data-p="'+p.id+'" data-cta="card" href="'+bookUrl(p.id,'card')+'" target="_blank" rel="noopener">空室・料金を見る</a></div>'
+  +'<div class="meta2"><div class="cprice'+(av==='no'?' sold':'')+'">'+(av==='no'?'<b>満室</b>':(p.price?'<b>¥'+p.price.toLocaleString()+'</b><span class="u">〜/人</span>':''))+'<span class="n">最大'+p.cap+'名</span></div>'
+  +'<a class="arrow" href="/'+p.slug+'/">詳しく見る →</a></div>'
   +'</div></article>'
  }).join('');
 }
 renderCards();
 // ===== 比較表(絞り込み対応) =====
 var ROWS=[
- ['エリア',['伊豆高原','伊豆高原','熱海','城ヶ崎','富戸','自然郷']],
+ ['エリア',['伊豆高原','伊豆高原','熱海','城ヶ崎','富戸','熱海・自然郷']],
  ['定員',V.map(function(p){return p.cap+'名'})],
  ['サウナ',[1,0,0,0,1,1]],
  ['温泉',[0,1,0,1,1,1]],
@@ -364,13 +367,14 @@ var CHIP_DEFS=[['すべて',null],['サウナ',2],['温泉',3],['ペットOK',5]
 function renderCmp(rowIdx){
  var idx=V.map(function(_,i){return i});
  if(rowIdx!==null) idx=idx.filter(function(i){return ROWS[rowIdx][1][i]===1});
- var thead='<thead><tr><th class="attr"></th>'+idx.map(function(i){var p=V[i];return '<th>'+p.name.replace('AMAO VILLA ','AMAO<br>').replace('Villa 緑と物語 IZU ROKUSYO','緑と物語<br>IZU ROKUSYO')+'</th>'}).join('')+'</tr></thead>';
+ var thead='<thead><tr><th class="attr"></th>'+idx.map(function(i){var p=V[i];return '<th class="sname"><span class="sthumb" style="background-image:url(/assets/'+p.imgs[0]+'.jpg)"></span><b>'+p.name.replace('AMAO VILLA ','AMAO ').replace('Villa 緑と物語 IZU ROKUSYO','緑と物語')+'</b><small>'+r0(i)+'</small></th>'}).join('')+'</tr></thead>';
+ function r0(i){return ROWS[0][1][i]}
  var tbody='<tbody>'+ROWS.map(function(r){
   return '<tr><td class="attr">'+r[0]+'</td>'+idx.map(function(i){var v=r[1][i];
    if(v===1)return '<td class="ok">✓</td>';
    if(v===0)return '<td class="no">—</td>';
    return '<td>'+v+'</td>'}).join('')+'</tr>'}).join('')
- +'<tr><td class="attr">予約</td>'+idx.map(function(i){var p=V[i];return '<td class="bkc"><a data-book data-p="'+p.id+'" data-cta="compare" href="'+bookUrl(p.id,'compare')+'" target="_blank" rel="noopener">空室を見る</a></td>'}).join('')+'</tr></tbody>';
+ +'<tr class="detailrow"><td class="attr"></td>'+idx.map(function(i){var p=V[i];return '<td><a class="dlink" href="/'+p.slug+'/">詳しく見る</a></td>'}).join('')+'</tr></tbody>';
  document.getElementById('cmpTable').innerHTML=thead+tbody;
 }
 var chipsEl=document.getElementById('cmpChips');
@@ -469,7 +473,7 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
 // ===== A DAY / STEPS 描画 =====
 var DAYS=[
  ['CHECK IN','到着','鍵を受け取り、一棟まるごと貸切に。まずは家中を探検。','izukogen-0','庭で遊ぶ犬と貸切ヴィラ'],
- ['AFTERNOON','サウナと外気浴','貸切サウナで汗を流し、風の音だけの外気浴で整う。','futo-1','Harviaストーブの本格サウナ'],
+ ['AFTERNOON','サウナと外気浴','貸切サウナで汗を流し、風の音だけの外気浴で整う。','futo-1','天然ヒノキの本格サウナ'],
  ['SUNSET','BBQと夕景','ガーデンで火を起こし、海と空が染まるのを眺めて乾杯。','atami-0','相模湾と初島の夕景'],
  ['NIGHT','夜は長く、自由に','温泉に浸かり、火を囲む。門限も気遣いもなし。','midori-3','夜の中庭と焚き火'],
  ['MORNING','静かな朝','鳥の声で目覚めて、朝風呂と珈琲。チェックアウトまで、ゆっくりと。','shizenkyo-0','海を望む朝のリビング']
@@ -497,14 +501,14 @@ document.getElementById('steps').innerHTML=STEPS.map(function(s){
  var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
  s.onload=function(){
   var pts=[
-   {n:'Villa 緑と物語',short:'緑と物語',id:'amao-midori',ll:[34.885,139.098]},
+   {n:'Villa 緑と物語',short:'緑と物語',id:'amao-midori',ll:[34.8851,139.1039]},
    {n:'AMAO 伊豆高原',short:'伊豆高原',id:'amao-izukogen',ll:[34.874,139.089]},
-   {n:'AMAO 熱海',short:'熱海',id:'amao-atami',ll:[35.083,139.066]},
-   {n:'AMAO 城ヶ崎',short:'城ヶ崎',id:'amao-jogasaki',ll:[34.888,139.128]},
-   {n:'AMAO 富戸',short:'富戸',id:'amao-futo',ll:[34.928,139.128]},
-   {n:'AMAO 自然郷',short:'自然郷',id:'amao-shizenkyo',ll:[34.858,139.088]}
+   {n:'AMAO 熱海',short:'熱海',id:'amao-atami',ll:[35.104,139.078]},
+   {n:'AMAO 城ヶ崎',short:'城ヶ崎',id:'amao-jogasaki',ll:[34.902,139.119]},
+   {n:'AMAO 富戸',short:'富戸',id:'amao-futo',ll:[34.890,139.127]},
+   {n:'AMAO 自然郷',short:'自然郷',id:'amao-shizenkyo',ll:[35.075,139.051]}
   ];
-  var map=L.map('leafmap',{scrollWheelZoom:false}).setView([34.96,139.1],10);
+  var map=L.map('leafmap',{scrollWheelZoom:false}).fitBounds(pts.map(function(p){return p.ll}),{padding:[40,40]});
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap contributors',maxZoom:18}).addTo(map);
   var lg=document.getElementById('maplegend');
   pts.forEach(function(p){
