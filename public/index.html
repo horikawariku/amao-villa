@@ -91,17 +91,17 @@ nav.gnav a{opacity:.85}nav.gnav a:hover{opacity:1}
 .arrow{flex:none;font-family:var(--jp);font-size:11.5px;letter-spacing:.04em;display:inline-flex;align-items:center;gap:7px;font-weight:700;border-radius:999px;padding:9px 17px;background:var(--navy);color:#fff;transition:.18s}
 .arrow:active{transform:scale(.96)}
 .cprice{line-height:1.35}
-.cprice b{font-size:17px;font-weight:700;font-variant-numeric:lining-nums}
-.cprice .u{font-size:11px;color:var(--ink2)}
-.cprice .n{display:block;font-size:10.5px;color:var(--ink2)}
+.cprice b{font-size:22px;font-weight:700;font-variant-numeric:lining-nums;letter-spacing:-.01em}
+.cprice .u{font-size:11.5px;color:var(--ink2)}
 .cprice.sold b{color:var(--ink2)}
+.ccap{display:block;font-size:11px;color:var(--ink2);margin-top:2px}
 /* compare */
 .cmpwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px}
 .cmpwrap::-webkit-scrollbar{height:0}
-table.cmp{border-collapse:separate;border-spacing:0;min-width:860px;width:100%;background:var(--card);border-radius:14px;overflow:hidden}
+table.cmp{border-collapse:separate;border-spacing:0;min-width:860px;width:100%;background:var(--card);border-radius:14px}
 .cmp th,.cmp td{padding:13px 14px;border-bottom:1px solid var(--line);font-size:13px;text-align:center;vertical-align:middle}
 .cmp thead th{background:var(--card);font-family:var(--jp);font-weight:600;font-size:13.5px;line-height:1.5;padding:16px 10px;vertical-align:top}
-.cmp .attr{position:sticky;left:0;background:#efe9df;font-weight:600;font-size:12px;white-space:nowrap;text-align:left;z-index:2;min-width:88px}
+.cmp .attr{position:-webkit-sticky;position:sticky;left:0;background:#efe9df;font-weight:600;font-size:12px;white-space:nowrap;text-align:left;z-index:3;min-width:88px;box-shadow:2px 0 6px -3px rgba(23,29,38,.18)}
 .cmp thead .attr{background:var(--card)}
 .cmp .ok{color:#2c7a4b;font-weight:700}
 .cmp .no{color:#c9c2b6}
@@ -341,11 +341,11 @@ function renderCards(){
   var av=p._av; // 'ok' | 'no' | 'unknown' | undefined
   return '<article class="card'+(av==='no'?' full':'')+'" id="'+p.id+'">'
   +'<div class="cgal">'+p.imgs.map(function(im,i){return '<div>'+(i===0&&p.isNew?'<span class="new">NEW OPEN</span>':'')+'<img src="/assets/'+im+'.jpg" alt="'+p.alts[i]+'" loading="'+(p.isNew&&i===0?'eager':'lazy')+'"></div>'}).join('')+'</div>'
-  +'<div class="cbody"><h3>'+p.name+'</h3><div class="carea">'+p.area+'</div>'
+  +'<div class="cbody"><h3>'+p.name+'</h3><div class="carea">'+p.area+'<span class="ccap">最大'+p.cap+'名・一日一組貸切</span></div>'
   +'<div class="ctag">'+p.tags.map(function(t){return '<span class="'+tagCls(t)+'">'+t+'</span>'}).join('')+'</div>'
   +'<p class="clead">'+p.lead+'</p>'
   +(av?(av==='ok'?'<a class="avl ok" data-book data-p="'+p.id+'" data-cta="datesearch" href="'+bookUrl(p.id,'datesearch')+'" target="_blank" rel="noopener">◯ 空室あり ─ 予約へ進む →</a>':'<div class="avl '+av+'">'+(av==='no'?'✕ 満室':'空室を確認してください')+'</div>'):'')
-  +'<div class="meta2"><div class="cprice'+(av==='no'?' sold':'')+'">'+(av==='no'?'<b>満室</b>':(p.price?'<b>¥'+p.price.toLocaleString()+'</b><span class="u">〜/人</span>':''))+'<span class="n">最大'+p.cap+'名</span></div>'
+  +'<div class="meta2"><div class="cprice'+(av==='no'?' sold':'')+'">'+(av==='no'?'<b>満室</b>':(p.price?'<b>¥'+p.price.toLocaleString()+'</b><span class="u">〜/人</span>':'<span class="u">料金は予約ページで</span>'))+'</div>'
   +'<a class="arrow" href="/'+p.slug+'/">詳しく見る →</a></div>'
   +'</div></article>'
  }).join('');

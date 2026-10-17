@@ -57,13 +57,14 @@ h2.big{font-family:var(--jp);font-size:23px;line-height:1.6;font-weight:600;marg
 .gcount{font-family:var(--en);font-size:12px;color:var(--ink2)}.gcount b{color:var(--ink);font-weight:700}
 .gstrip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 22px 14px;scrollbar-width:none}.gstrip::-webkit-scrollbar{display:none}
 .gitem{flex:0 0 80%;scroll-snap-align:center;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:#e4dfd4}.gitem img{width:100%;height:100%;object-fit:cover}
-.facil{display:grid;grid-template-columns:1fr;gap:12px}
-.fc{border:1px solid var(--line);border-radius:14px;padding:18px 16px;background:#fff}
-.fc .no{font-family:var(--en);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--ink2)}
-.fc b{display:block;font-family:var(--jp);font-weight:600;font-size:15px;line-height:1.5;margin:6px 0 6px}
-.fc p{font-family:var(--jp);font-size:12.5px;color:var(--ink2);line-height:1.95}
+.exp{display:flex;flex-direction:column;gap:36px}
+.expitem .ph{border-radius:16px;overflow:hidden;aspect-ratio:3/2;background:#e4dfd4;box-shadow:0 18px 40px -30px rgba(27,35,46,.5)}.expitem .ph img{width:100%;height:100%;object-fit:cover}
+.expitem .no{font-family:var(--en);font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--ink2);margin:15px 0 5px}
+.expitem h3{font-family:var(--jp);font-size:18px;font-weight:600;margin-bottom:7px}
+.expitem p{font-family:var(--jp);font-size:13px;color:var(--ink2);line-height:2}
+.shead .jt{font-family:var(--jp);font-size:21px;font-weight:700;letter-spacing:.02em}
 #feat{background:var(--dark);color:var(--cream)}
-#feat .shead .en{color:var(--cream)}#feat .shead .jp{color:#aab1bc}
+#feat .shead .en,#feat .shead .jt{color:var(--cream)}#feat .shead .jp{color:#aab1bc}
 #feat .ph{border-radius:16px;overflow:hidden;aspect-ratio:16/10;margin:6px 0 24px;background:#10151c}#feat .ph img{width:100%;height:100%;object-fit:cover}
 #feat .lead{color:rgba(245,242,236,.82)}
 .spt{display:grid;grid-template-columns:1fr 1fr;gap:22px 26px;margin-top:26px}
@@ -112,7 +113,7 @@ footer .cp{font-family:var(--en);font-size:10px;letter-spacing:.14em;color:var(-
 #bookbar a{flex:none;background:var(--dark);color:var(--cream);border-radius:15px;padding:12px 26px;font-family:var(--jp);font-weight:700;font-size:15px;text-align:center;line-height:1.15}
 #bookbar a small{display:block;font-family:var(--en);font-size:9px;letter-spacing:.1em;opacity:.78;font-weight:700;margin-bottom:1px}
 .reveal{opacity:0;transform:translateY(20px);transition:.8s}.reveal.in{opacity:1;transform:none}
-@media(min-width:720px){.hero h1{font-size:44px}.sect{padding:80px 40px}.gitem{flex-basis:34%}.facil{grid-template-columns:1fr 1fr}.specgrid{grid-template-columns:repeat(3,1fr)}.amenlist{grid-template-columns:1fr 1fr;gap:0 32px}.spt{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:720px){.hero h1{font-size:44px}.sect{padding:80px 40px}.gitem{flex-basis:34%}.exp{display:grid;grid-template-columns:1fr 1fr;gap:40px 34px}.expitem .ph{aspect-ratio:4/3}.specgrid{grid-template-columns:repeat(3,1fr)}.amenlist{grid-template-columns:1fr 1fr;gap:0 32px}.spt{grid-template-columns:repeat(4,1fr)}}
 </style>
 </head>
 <body>
@@ -138,14 +139,14 @@ footer .cp{font-family:var(--en);font-size:10px;letter-spacing:.14em;color:var(-
 
   <section class="sect wide reveal">
     <div class="shead"><div class="en">Facilities</div><div class="jp">設備・空間 ─ 一日一組・最大9名で貸切。</div></div>
-    <div class="facil"><div class="fc reveal"><div class="no">01 ・ Hinoki Sauna</div><b>天然ヒノキのサウナ</b><p>最大8名まで同時に入れる広々としたサウナです。最高95度まで上がります（温度は季節により変わります）。※有料オプション（11,000円/日）です。</p></div><div class="fc reveal"><div class="no">02 ・ Onsen & Cold Bath</div><b>天然温泉と水風呂</b><p>お風呂は天然温泉。心地よいクールダウンを叶える水風呂も完備し、2つの浴槽でサウナとの往復をお楽しみいただけます。</p></div><div class="fc reveal"><div class="no">03 ・ Courtyard</div><b>ガラス張りの中庭</b><p>家の中心にあるガラス張りの中庭を、各部屋が囲む造り。お子様が動き回っても様子がよく分かるので安心です。</p></div><div class="fc reveal"><div class="no">04 ・ Architecture</div><b>建築家・北山恒氏の設計</b><p>有名建築家による設計の住空間。ここでしか過ごせない、非日常の生活をご体験ください。</p></div><div class="fc reveal"><div class="no">05 ・ Theater</div><b>120インチスクリーン</b><p>プロジェクターで地デジ・Prime Video・Netflix・YouTubeなどをお楽しみいただけます。</p></div><div class="fc reveal"><div class="no">06 ・ Fireplace</div><b>暖炉のある夜</b><p>暖炉（有料 2,500円/回）をご用意しています。火を眺めながら、静かな夜をどうぞ。</p></div></div>
+    <div class="exp"><div class="expitem reveal"><div class="ph"><img loading="lazy" alt="天然ヒノキのサウナ" src="https://media.xmlcal.com/pic/p0026/7519/40.800.png"></div><div class="no">01</div><h3>天然ヒノキのサウナ</h3><p>最大8名まで同時に入れる広々としたサウナです。最高95度まで上がります（温度は季節により変わります）。※有料オプション（11,000円/日）です。</p></div><div class="expitem reveal"><div class="ph"><img loading="lazy" alt="天然温泉と水風呂" src="https://media.xmlcal.com/pic/p0026/7519/01.800.png"></div><div class="no">02</div><h3>天然温泉と水風呂</h3><p>お風呂は天然温泉。心地よいクールダウンを叶える水風呂も完備し、2つの浴槽でサウナとの往復をお楽しみいただけます。</p></div><div class="expitem reveal"><div class="ph"><img loading="lazy" alt="ガラス張りの中庭" src="https://media.xmlcal.com/pic/p0026/7519/04.800.png"></div><div class="no">03</div><h3>ガラス張りの中庭</h3><p>家の中心にあるガラス張りの中庭を、各部屋が囲む造り。お子様が動き回っても様子がよく分かるので安心です。</p></div><div class="expitem reveal"><div class="ph"><img loading="lazy" alt="建築家・北山恒氏の設計" src="https://media.xmlcal.com/pic/p0026/7519/30.800.png"></div><div class="no">04</div><h3>建築家・北山恒氏の設計</h3><p>有名建築家による設計の住空間。ここでしか過ごせない、非日常の生活をご体験ください。</p></div><div class="expitem reveal"><div class="ph"><img loading="lazy" alt="120インチスクリーン" src="https://media.xmlcal.com/pic/p0026/7519/19.800.png"></div><div class="no">05</div><h3>120インチスクリーン</h3><p>プロジェクターで地デジ・Prime Video・Netflix・YouTubeなどをお楽しみいただけます。</p></div><div class="expitem reveal"><div class="ph"><img loading="lazy" alt="暖炉のある夜" src="https://media.xmlcal.com/pic/p0026/7519/33.800.png"></div><div class="no">06</div><h3>暖炉のある夜</h3><p>暖炉（有料 2,500円/回）をご用意しています。火を眺めながら、静かな夜をどうぞ。</p></div></div>
   </section>
 
   <section id="feat" class="sect reveal"><div class="wide">
-    <div class="shead"><div class="en">Hinoki Sauna</div><div class="jp">最高95度、最大8名。</div></div>
+    <div class="shead"><div class="jt">最高95度、最大8名。</div></div>
     <div class="ph"><img loading="lazy" alt="天然ヒノキの本格サウナ" src="/assets/futo-1.jpg"></div>
     <p class="lead">天然ヒノキを使用したサウナは、香りも熱も本物です。サウナ→水風呂→天然温泉という、この宿ならではの贅沢な動線でととのってください。</p>
-    <div class="spt"><div class="sptv"><div class="e">Hinoki</div><h4>天然ヒノキ</h4><p>木の香りに包まれる、本格派のサウナ室です。</p></div><div class="sptv"><div class="e">95℃</div><h4>最高95度</h4><p>しっかり熱い。温度は季節により変わります。</p></div><div class="sptv"><div class="e">8 persons</div><h4>最大8名</h4><p>グループ全員で同時に入れる広さです。</p></div><div class="sptv"><div class="e">Onsen</div><h4>温泉×水風呂</h4><p>2つの浴槽で、サウナ後の贅沢な選択肢を。</p></div></div>
+    <div class="spt"><div class="sptv"><h4>天然ヒノキ</h4><p>木の香りに包まれる、本格派のサウナ室です。</p></div><div class="sptv"><h4>最高95度</h4><p>しっかり熱い。温度は季節により変わります。</p></div><div class="sptv"><h4>最大8名</h4><p>グループ全員で同時に入れる広さです。</p></div><div class="sptv"><h4>温泉×水風呂</h4><p>2つの浴槽で、サウナ後の贅沢な選択肢を。</p></div></div>
   </div></section>
 
   <section id="spec" class="sect reveal"><div class="wide">
