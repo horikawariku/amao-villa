@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Zen+Old+Mincho:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://redirect-tracker-eta.vercel.app/api/site-tracker-js" defer></script>
 <style>
-:root{--ink:#1b232e;--ink2:#5a6472;--bg:#f5f2ec;--card:#ffffff;--line:#e2ddd2;--navy:#161d26;--sand:#b39264;--cream:#f5f2ec;
+:root{--ink:#1b232e;--ink2:#5a6472;--bg:#f5f2ec;--card:#ffffff;--line:#e2ddd2;--navy:#161d26;--cream:#f5f2ec;
 --en:'Manrope',sans-serif;--mincho:'Zen Old Mincho',serif;--jp:'Zen Kaku Gothic New',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
@@ -366,7 +366,7 @@ document.getElementById('steps').innerHTML=STEPS.map(function(s){
   var lg=document.getElementById('maplegend');
   pts.forEach(function(p){
    var mk=L.circleMarker(p.ll,{radius:9,color:'#161d26',weight:2,fillColor:'#161d26',fillOpacity:.95}).addTo(map);
-   mk.bindPopup('<b style="font-size:13px">'+p.n+'</b><br><a href="#'+p.id+'" style="color:#b39264;font-weight:700">この宿を見る</a>');
+   mk.bindPopup('<b style="font-size:13px">'+p.n+'</b><br><a href="#'+p.id+'" style="color:#161d26;font-weight:700;text-decoration:underline">この宿を見る</a>');
    var b=document.createElement('button');b.textContent=p.n;
    b.onclick=function(){map.setView(p.ll,12);mk.openPopup()};
    lg.appendChild(b);
