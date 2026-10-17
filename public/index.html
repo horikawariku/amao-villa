@@ -28,20 +28,20 @@
 :root{--ink:#1b232e;--ink2:#5a6472;--bg:#f5f2ec;--card:#ffffff;--line:#e2ddd2;--navy:#161d26;--cream:#f5f2ec;
 --en:'Manrope',sans-serif;--mincho:'Zen Old Mincho',serif;--jp:'Zen Kaku Gothic New',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth;scroll-padding-top:58px}
 html,body{overflow-x:hidden;max-width:100vw}
 body{font-family:var(--jp);color:var(--ink);background:var(--bg);line-height:1.85;letter-spacing:.01em;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
 /* header */
-header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;transition:background .3s,box-shadow .3s;color:#fff}
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:7px 18px;transition:background .3s,box-shadow .3s;color:#fff}
 header.solid{background:rgba(22,29,38,.96);box-shadow:0 2px 16px #0003}
-.brand{font-family:var(--en);font-weight:600;font-size:18px;letter-spacing:.34em;margin-right:-.34em}
-.brand small{display:block;font-family:var(--jp);font-weight:400;font-size:9px;letter-spacing:.28em;opacity:.85;margin-top:2px}
+.brand{font-family:var(--en);font-weight:600;font-size:15px;letter-spacing:.3em;margin-right:-.3em;line-height:1.3}
+.brand small{display:block;font-family:var(--jp);font-weight:400;font-size:8px;letter-spacing:.24em;opacity:.85;margin-top:1px}
 nav.gnav{display:flex;gap:26px;align-items:center;font-family:var(--en);font-size:12px;letter-spacing:.18em}
 nav.gnav a{opacity:.85}nav.gnav a:hover{opacity:1}
-.nav-book{background:#fff;color:var(--navy);padding:9px 20px;border-radius:999px;font-weight:600;opacity:1!important}
+.nav-book{background:#fff;color:var(--navy);padding:6px 16px;border-radius:999px;font-weight:600;opacity:1!important}
 @media(max-width:760px){nav.gnav a:not(.nav-book){display:none}}
 /* hero */
 .hero{position:relative;height:92svh;min-height:540px;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
@@ -147,43 +147,46 @@ table.cmp{border-collapse:separate;border-spacing:0;min-width:860px;width:100%;b
 /* footer */
 footer{padding:44px 22px 110px;text-align:center;color:var(--ink2);font-size:11.5px}
 footer .brand2{font-family:var(--en);letter-spacing:.3em;margin-right:-.3em;color:var(--ink);font-size:14px;font-weight:600;margin-bottom:10px}
-/* sticky bar(mysa式) */
-.bar-dates{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:2px;background:#f4f1ec;border:1px solid var(--line);border-radius:12px;padding:9px 16px;text-align:left;cursor:pointer;font-family:var(--jp)}
-.bar-dates small{font-family:var(--en);font-size:8.5px;letter-spacing:.18em;color:var(--ink2);font-weight:700}
-.bar-dates span{font-size:13.5px;font-weight:600;color:var(--ink)}
-.bar-go{flex:none;background:var(--navy);color:#fff;border-radius:12px;padding:14px 22px;font-size:13.5px;font-weight:700;font-family:var(--jp);cursor:pointer}
-/* calendar dialog */
-.dlg-back{position:fixed;inset:0;z-index:60;background:rgba(12,16,22,.55);display:flex;align-items:flex-end;justify-content:center}
-@media(min-width:640px){.dlg-back{align-items:center}}
-.dlg{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:440px;max-height:88dvh;overflow:auto;padding:18px 18px 22px}
-@media(min-width:640px){.dlg{border-radius:20px}}
-.dlg-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
-.dlg-top b{font-size:15px}
-.dlg-x{font-size:26px;line-height:1;background:none;border:none;cursor:pointer;color:var(--ink2);padding:4px 8px}
-.cal-head{display:flex;align-items:center;justify-content:space-between;margin:8px 0 6px}
-.cal-head span{font-weight:700;font-size:14px}
-.cal-head button{background:none;border:1px solid var(--line);border-radius:8px;width:34px;height:30px;cursor:pointer;font-size:14px}
-.cal-week{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:10.5px;color:var(--ink2);margin-bottom:4px}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
-.cal-grid button{height:38px;border:none;background:none;border-radius:9px;font-size:13px;font-family:var(--jp);cursor:pointer}
-.cal-grid button:disabled{color:#c9c2b6;cursor:default}
-.cal-grid button.sel{background:var(--navy);color:#fff}
-.cal-grid button.mid{background:#e8ecf2}
-.cal-status{font-size:11.5px;color:var(--ink2);margin:10px 2px 6px;min-height:18px}
-.avail-list{display:grid;gap:8px;margin-top:6px}
-.avail-row{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
-.avail-row .nm{font-size:12.5px;font-weight:700;line-height:1.4}
-.avail-row .st{font-size:11px;color:var(--ink2)}
-.avail-row .ok{color:#2c7a4b;font-weight:700}
-.avail-row a{flex:none;background:var(--navy);color:#fff;border-radius:999px;padding:8px 14px;font-size:11.5px;font-weight:700}
-.avail-row.full{opacity:.55}
-/* sticky bar */
-.bar{position:fixed;left:50%;transform:translate(-50%,calc(100% + 24px));bottom:12px;z-index:40;width:calc(100vw - 24px);max-width:420px;background:#fff;border-radius:16px;box-shadow:0 12px 34px rgba(12,16,22,.25);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;transition:transform .35s ease}
-.bar.on{transform:translate(-50%,0)}
-.bar .t{font-size:12px;line-height:1.6}
-.bar .t b{font-family:var(--jp);font-size:13.5px;font-weight:700;display:block}
-.bar a{flex:none;background:var(--navy);color:#fff;border-radius:11px;padding:11px 22px;font-size:13.5px;font-weight:600;text-align:center;line-height:1.2}
-.bar a small{display:block;font-family:var(--en);font-size:8.5px;letter-spacing:.16em;opacity:.7;margin-bottom:1px}
+/* bookbar + calendar (mysa UI / AMAO配色) */
+#bookbar{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(245,242,236,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+#bookbar .bf{flex:1;min-width:0;padding:6px 12px;border-radius:12px;background:rgba(22,29,38,.05);text-align:left;border:none;cursor:pointer;font-family:var(--jp)}
+@media(min-width:720px){#bookbar .bf{flex:0 0 200px}}
+#bookbar .bf span{display:block;font-family:var(--en);font-size:9px;letter-spacing:.14em;color:var(--ink2);text-transform:uppercase;font-weight:600}
+#bookbar .bf b{font-weight:500;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;color:var(--ink)}
+#bookbar .go{flex:none;background:var(--navy);color:#fff;font-family:var(--jp);font-weight:700;font-size:14px;padding:13px 20px;border-radius:12px;border:none;cursor:pointer}
+#cal{position:fixed;inset:0;z-index:100;background:rgba(15,17,22,.55);backdrop-filter:blur(3px);display:none;align-items:flex-end;justify-content:center}
+#cal.open{display:flex}
+.calcard{background:var(--bg);width:100%;max-width:460px;border-radius:22px 22px 0 0;padding:22px 20px calc(22px + env(safe-area-inset-bottom));max-height:88vh;overflow-y:auto}
+@media(min-width:640px){#cal{align-items:center}.calcard{border-radius:20px}}
+.calhd{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.calhd .t{font-family:var(--jp);font-size:18px;font-weight:500}
+.calhd .x{font-size:22px;color:var(--ink2);width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:none;border:none;cursor:pointer}
+.calsub{font-family:var(--en);font-size:11px;letter-spacing:.1em;color:var(--ink2);text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.calnav{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.calnav .m{font-family:var(--jp);font-size:16px;font-weight:500}
+.calnav button{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);font-size:16px;color:var(--ink);background:none;cursor:pointer}
+.caldow{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:4px}
+.caldow span{text-align:center;font-family:var(--en);font-size:10px;color:var(--ink2);font-weight:600;padding:4px 0}
+.calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.calgrid button{aspect-ratio:1;border-radius:9px;font-family:var(--en);font-size:14px;color:var(--ink);position:relative;background:none;border:none;cursor:pointer}
+.calgrid button.off{color:transparent;pointer-events:none}
+.calgrid button.past{color:var(--ink2);opacity:.35;pointer-events:none}
+.calgrid button.inrange{background:rgba(22,29,38,.12)}
+.calgrid button.edge{background:var(--navy);color:#fff;font-weight:700}
+.calgrid button.edge.s{border-radius:9px 0 0 9px}
+.calgrid button.edge.e{border-radius:0 9px 9px 9px}
+.calfoot{margin-top:18px;display:flex;align-items:center;gap:12px}
+.calfoot .sel{flex:1;font-family:var(--jp);font-size:13px;color:var(--ink2)}
+.calfoot .sel b{color:var(--ink);font-weight:500}
+.calfoot .find{background:var(--navy);color:#fff;font-family:var(--jp);font-weight:700;font-size:14px;padding:13px 24px;border-radius:12px;border:none;cursor:pointer}
+.calfoot .find[disabled]{opacity:.4}
+/* カード空室バッジ (mysa UI) */
+.avl{font-family:var(--jp);font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-top:12px;padding:8px 11px;border-radius:8px;display:none;text-align:center}
+.avl.ok{display:block;background:rgba(31,157,87,.15);color:#1f7a44;text-decoration:none;cursor:pointer}
+.avl.no{display:block;background:rgba(204,59,59,.12);color:#cc3b3b}
+.avl.unknown{display:block;background:rgba(22,29,38,.06);color:var(--ink2)}
+.cprice.sold b{color:var(--ink2)}
+.card.full{opacity:.62}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"AMAO VILLA","url":"https://amao-villa-psi.vercel.app/","description":"伊豆・熱海エリアの一棟貸しヴィラブランド。サウナ・温泉・愛犬同伴対応の6邸を展開。"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[
@@ -272,21 +275,15 @@ footer .brand2{font-family:var(--en);letter-spacing:.3em;margin-right:-.3em;colo
  <p style="margin-top:6px;opacity:.7">© AMAO VILLA — Luxe Villas 伊豆</p>
 </footer>
 
-<div class="bar" id="bar">
- <button class="bar-dates" id="barDates"><small>DATES</small><span id="barDateText">日付を選ぶ</span></button>
- <button class="bar-go" id="barGo">空室を探す</button>
-</div>
-
-<div class="dlg-back" id="dlgBack" hidden>
- <div class="dlg" role="dialog" aria-label="日付を選んで空室を探す">
-  <div class="dlg-top"><b>日付を選ぶ</b><button class="dlg-x" id="dlgX" aria-label="閉じる">×</button></div>
-  <div class="cal-head"><button id="calPrev" aria-label="前の月">←</button><span id="calMonth"></span><button id="calNext" aria-label="次の月">→</button></div>
-  <div class="cal-week"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
-  <div class="cal-grid" id="calGrid"></div>
-  <p class="cal-status" id="calStatus">チェックイン日を選んでください</p>
-  <div class="avail-list" id="availList"></div>
- </div>
-</div>
+<div id="bookbar"><button class="bf" id="bfDates"><span>Dates</span><b id="bfText">日付を選ぶ</b></button><button class="go" id="bfGo">空室を探す</button></div>
+<div id="cal"><div class="calcard" role="dialog" aria-label="宿泊日を選ぶ">
+  <div class="calhd"><div class="t">宿泊日を選ぶ</div><button class="x" id="calX" aria-label="閉じる">×</button></div>
+  <div class="calsub">チェックイン → チェックアウト</div>
+  <div class="calnav"><button id="calPrev" aria-label="前の月">‹</button><div class="m" id="calMonth"></div><button id="calNext" aria-label="次の月">›</button></div>
+  <div class="caldow"><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span><span>日</span></div>
+  <div class="calgrid" id="calGrid"></div>
+  <div class="calfoot"><div class="sel" id="calSel">日付を選択してください</div><button class="find" id="calFind" disabled>空室を探す</button></div>
+</div></div>
 
 <script>
 var TRACKER='https://redirect-tracker-eta.vercel.app/api/redirect';
@@ -332,19 +329,25 @@ function tagCls(t){
  if(t.indexOf('暖炉')>-1||t.indexOf('焚き火')>-1)return 't-fire';
  if(t.indexOf('スクリーン')>-1)return 't-screen';
  return ''}
-function bookUrl(id,cta){return TRACKER+'?p='+id+'&s='+encodeURIComponent(src())+'&cta='+cta}
+function bookUrl(id,cta){var u=TRACKER+'?p='+id+'&s='+encodeURIComponent(src())+'&cta='+cta;try{if(ci&&co)u+='&checkin='+fmt(ci)+'&checkout='+fmt(co)+'&numnight='+Math.round((co-ci)/864e5)}catch(e){}return u}
 // ===== カード描画 =====
-document.getElementById('cards').innerHTML=V.map(function(p){
- return '<article class="card" id="'+p.id+'">'
- +'<div class="cgal">'+p.imgs.map(function(im,i){return '<div>'+(i===0&&p.isNew?'<span class="new">NEW OPEN</span>':'')+'<img src="/assets/'+im+'.jpg" alt="'+p.alts[i]+'" loading="'+(p.isNew&&i===0?'eager':'lazy')+'"></div>'}).join('')+'</div>'
- +'<div class="cbody"><h3>'+p.name+'</h3><div class="carea">'+p.area+'</div>'
- +'<div class="cprice">'+(p.price?'<b>¥'+p.price.toLocaleString()+'</b><span class="u">〜/人</span>':'')+'<span class="n">最大'+p.cap+'名・一日一組の一棟貸切</span></div>'
- +'<div class="ctag">'+p.tags.map(function(t){return '<span class="'+tagCls(t)+'">'+t+'</span>'}).join('')+'</div>'
- +'<p class="clead">'+p.lead+'</p>'
-
- +'<div class="cbtn"><a class="book" data-book data-p="'+p.id+'" data-cta="card" href="'+bookUrl(p.id,'card')+'" target="_blank" rel="noopener">空室・料金を見る</a></div>'
- +'</div></article>'
-}).join('');
+function renderCards(){
+ var rk=function(p){return p._av==='ok'?0:p._av==='unknown'?1:p._av==='no'?3:2};
+ var list=V.slice().sort(function(a,b){return rk(a)-rk(b)});
+ document.getElementById('cards').innerHTML=list.map(function(p){
+  var av=p._av; // 'ok' | 'no' | 'unknown' | undefined
+  return '<article class="card'+(av==='no'?' full':'')+'" id="'+p.id+'">'
+  +'<div class="cgal">'+p.imgs.map(function(im,i){return '<div>'+(i===0&&p.isNew?'<span class="new">NEW OPEN</span>':'')+'<img src="/assets/'+im+'.jpg" alt="'+p.alts[i]+'" loading="'+(p.isNew&&i===0?'eager':'lazy')+'"></div>'}).join('')+'</div>'
+  +'<div class="cbody"><h3>'+p.name+'</h3><div class="carea">'+p.area+'</div>'
+  +'<div class="cprice'+(av==='no'?' sold':'')+'">'+(av==='no'?'<b>満室</b>':(p.price?'<b>¥'+p.price.toLocaleString()+'</b><span class="u">〜/人</span>':''))+'<span class="n">最大'+p.cap+'名</span></div>'
+  +'<div class="ctag">'+p.tags.map(function(t){return '<span class="'+tagCls(t)+'">'+t+'</span>'}).join('')+'</div>'
+  +'<p class="clead">'+p.lead+'</p>'
+  +(av?(av==='ok'?'<a class="avl ok" data-book data-p="'+p.id+'" data-cta="datesearch" href="'+bookUrl(p.id,'datesearch')+'" target="_blank" rel="noopener">◯ 空室あり ─ 予約へ進む →</a>':'<div class="avl '+av+'">'+(av==='no'?'✕ 満室':'空室を確認してください')+'</div>'):'')
+  +'<div class="cbtn"><a class="book" data-book data-p="'+p.id+'" data-cta="card" href="'+bookUrl(p.id,'card')+'" target="_blank" rel="noopener">空室・料金を見る</a></div>'
+  +'</div></article>'
+ }).join('');
+}
+renderCards();
 // ===== 比較表(絞り込み対応) =====
 var ROWS=[
  ['エリア',['伊豆高原','伊豆高原','熱海','城ヶ崎','富戸','自然郷']],
@@ -384,70 +387,83 @@ document.addEventListener('click',function(ev){
  var a=ev.target&&ev.target.closest?ev.target.closest('a[data-book]'):null;
  if(a){a.href=bookUrl(a.getAttribute('data-p'),a.getAttribute('data-cta'))}
 },true);
-// ===== 日付選択+空室検索(mysa式) =====
+// ===== 日付選択+空室検索 (mysa UI/UX) =====
 var AVAIL_API='https://redirect-tracker-eta.vercel.app/api/availability/';
-var ci=null,co=null,selStage=0,view=new Date();view.setDate(1);
-var dlgBack=document.getElementById('dlgBack');
-function fmt(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+var cal=document.getElementById('cal'), grid=document.getElementById('calGrid'), monthEl=document.getElementById('calMonth'), selEl=document.getElementById('calSel'), findBtn=document.getElementById('calFind'), bfText=document.getElementById('bfText');
+var today=new Date();today.setHours(0,0,0,0);
+var view=new Date(today.getFullYear(),today.getMonth(),1);
+var ci=null, co=null;
+function fmt(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
 function jp(d){return (d.getMonth()+1)+'/'+d.getDate()}
-function openDlg(){dlgBack.hidden=false;renderCal()}
-function closeDlg(){dlgBack.hidden=true}
-document.getElementById('barDates').onclick=openDlg;
-document.getElementById('barGo').onclick=function(){ci&&co?runSearch():openDlg()};
-document.getElementById('dlgX').onclick=closeDlg;
-dlgBack.addEventListener('click',function(e){if(e.target===dlgBack)closeDlg()});
-document.getElementById('calPrev').onclick=function(){view.setMonth(view.getMonth()-1);renderCal()};
-document.getElementById('calNext').onclick=function(){view.setMonth(view.getMonth()+1);renderCal()};
-function renderCal(){
- var y=view.getFullYear(),m=view.getMonth();
- document.getElementById('calMonth').textContent=y+'年'+(m+1)+'月';
- var today=new Date();today.setHours(0,0,0,0);
- var first=new Date(y,m,1),off=first.getDay(),last=new Date(y,m+1,0).getDate();
- var html='';
- for(var i=0;i<off;i++)html+='<span></span>';
- for(var d=1;d<=last;d++){
-  var dt=new Date(y,m,d),k=fmt(dt),cls='';
-  if(ci&&k===fmt(ci))cls='sel';else if(co&&k===fmt(co))cls='sel';
-  else if(ci&&co&&dt>ci&&dt<co)cls='mid';
-  html+='<button data-d="'+k+'" class="'+cls+'"'+(dt<today?' disabled':'')+'>'+d+'</button>';
- }
- document.getElementById('calGrid').innerHTML=html;
- document.getElementById('calStatus').textContent=!ci?'チェックイン日を選んでください':(!co?'チェックアウト日を選んでください':jp(ci)+' 〜 '+jp(co)+'（'+Math.round((co-ci)/864e5)+'泊）の空室を検索中…');
-}
-document.getElementById('calGrid').addEventListener('click',function(e){
- var b=e.target.closest('button[data-d]');if(!b||b.disabled)return;
- var p=b.getAttribute('data-d').split('-'),dt=new Date(+p[0],+p[1]-1,+p[2]);
- if(!ci||co||dt<=ci){ci=dt;co=null;document.getElementById('availList').innerHTML=''}
- else{co=dt}
- document.getElementById('barDateText').textContent=ci?(jp(ci)+(co?' 〜 '+jp(co):' 〜')):'日付を選ぶ';
- renderCal();
- if(ci&&co)runSearch();
-});
-function nightsList(){var a=[],d=new Date(ci);while(d<co){a.push(fmt(d));d.setDate(d.getDate()+1)}return a}
-function runSearch(){
- var list=document.getElementById('availList');
- list.innerHTML='<p class="cal-status">空室を確認しています…</p>';
- var ns=nightsList(),nn=ns.length;
- var qs='&checkin='+fmt(ci)+'&checkout='+fmt(co)+'&numnight='+nn;
- Promise.all(V.map(function(p){
-  if(p.id==='amao-midori')return Promise.resolve({p:p,st:'unknown'});
+var availReady=false;
+function loadAvail(){
+ return Promise.all(V.map(function(p){
+  if(p.id==='amao-midori'){p._booked=null;return Promise.resolve()}
   return fetch(AVAIL_API+p.id).then(function(r){return r.json()}).then(function(d){
-   var booked=d.booked||[];var free=ns.every(function(k){return booked.indexOf(k)===-1});
-   return {p:p,st:free?'ok':'full'};
-  }).catch(function(){return {p:p,st:'unknown'}});
- })).then(function(rs){
-  document.getElementById('calStatus').textContent=jp(ci)+' 〜 '+jp(co)+'（'+nn+'泊）の空室状況';
-  list.innerHTML=rs.map(function(r){
-   var p=r.p,url=bookUrl(p.id,'datesearch')+qs;
-   if(r.st==='ok')return '<div class="avail-row"><div><div class="nm">'+p.name+'</div><div class="st ok">◯ 空室あり</div></div><a data-book data-p="'+p.id+'" data-cta="datesearch" href="'+url+'" target="_blank" rel="noopener">予約へ</a></div>';
-   if(r.st==='full')return '<div class="avail-row full"><div><div class="nm">'+p.name+'</div><div class="st">× この日程は満室</div></div></div>';
-   return '<div class="avail-row"><div><div class="nm">'+p.name+'</div><div class="st">空室カレンダーで確認</div></div><a data-book data-p="'+p.id+'" data-cta="datesearch" href="'+url+'" target="_blank" rel="noopener">確認する</a></div>';
-  }).join('');
- });
+   p._booked={};(d.booked||[]).forEach(function(x){p._booked[x]=1});
+  }).catch(function(){p._booked=null});
+ })).then(function(){availReady=true});
 }
-// ===== ヘッダー/バー表示制御 =====
-var hd=document.getElementById('hd'),bar=document.getElementById('bar');
-function onScroll(){var y=window.scrollY;hd.classList.toggle('solid',y>40);bar.classList.toggle('on',y>window.innerHeight*.6)}
+function rangeAvail(p){
+ if(!ci||!co)return null;
+ if(!p._booked)return null; // 取得不可 = 不明
+ var d=new Date(ci);
+ while(d<co){ if(p._booked[fmt(d)])return false; d.setDate(d.getDate()+1); }
+ return true;
+}
+function renderCal(){
+ monthEl.textContent=view.getFullYear()+'年 '+(view.getMonth()+1)+'月';
+ var first=new Date(view.getFullYear(),view.getMonth(),1);
+ var startDow=(first.getDay()+6)%7; // Monday=0
+ var days=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+ var html='';
+ for(var i=0;i<startDow;i++)html+='<button class="off"></button>';
+ for(var dn=1;dn<=days;dn++){
+  var d=new Date(view.getFullYear(),view.getMonth(),dn);
+  var cls='';
+  if(d<today)cls='past';
+  else{
+   if(ci&&co&&d>ci&&d<co)cls='inrange';
+   if(ci&&d.getTime()===ci.getTime())cls='edge s';
+   if(co&&d.getTime()===co.getTime())cls='edge e';
+  }
+  html+='<button class="'+cls+'" data-d="'+fmt(d)+'">'+dn+'</button>';
+ }
+ grid.innerHTML=html;
+}
+grid.addEventListener('click',function(e){
+ var b=e.target.closest('button[data-d]');if(!b)return;
+ var parts=b.getAttribute('data-d').split('-');var d=new Date(+parts[0],+parts[1]-1,+parts[2]);
+ if(!ci||(ci&&co)){ci=d;co=null}
+ else if(d>ci){co=d}
+ else{ci=d;co=null}
+ renderCal();
+ if(ci&&co){selEl.innerHTML='<b>'+jp(ci)+' → '+jp(co)+'</b>（'+Math.round((co-ci)/864e5)+'泊）';findBtn.disabled=false}
+ else{selEl.innerHTML='チェックアウト日を選択';findBtn.disabled=true}
+});
+document.getElementById('calPrev').addEventListener('click',function(){view.setMonth(view.getMonth()-1);renderCal()});
+document.getElementById('calNext').addEventListener('click',function(){view.setMonth(view.getMonth()+1);renderCal()});
+function openCal(){cal.classList.add('open');renderCal();if(!availReady)loadAvail()}
+function closeCal(){cal.classList.remove('open')}
+document.getElementById('bfDates').addEventListener('click',openCal);
+document.getElementById('bfGo').addEventListener('click',openCal);
+document.getElementById('calX').addEventListener('click',closeCal);
+cal.addEventListener('click',function(e){if(e.target===cal)closeCal()});
+findBtn.addEventListener('click',function(){
+ if(!ci||!co)return;
+ var apply=function(){
+  V.forEach(function(p){var a=rangeAvail(p);p._av=(a===null?'unknown':(a?'ok':'no'))});
+  renderCards();
+  bfText.textContent=jp(ci)+' → '+jp(co);
+  closeCal();
+  document.getElementById('villas').scrollIntoView({behavior:'smooth'});
+ };
+ if(availReady){apply()}
+ else{findBtn.textContent='確認中…';loadAvail().then(function(){findBtn.textContent='空室を探す';apply()})}
+});
+// ===== ヘッダー表示制御 =====
+var hd=document.getElementById('hd');
+function onScroll(){hd.classList.toggle('solid',(window.scrollY||0)>40)}
 addEventListener('scroll',onScroll,{passive:true});onScroll();
 
 // ===== A DAY / STEPS 描画 =====
